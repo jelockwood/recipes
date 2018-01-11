@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of draw.io.</string>
 	<key>Identifier</key>
-	<string>com.github.jelockwood.recipies.download.draw.io</string>
+	<string>com.github.jelockwood.recipes.download.draw.io</string>
 	<key>Input</key>
 	<dict>
 		<key>GITHUB_REPO</key>
