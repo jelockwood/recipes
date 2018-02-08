@@ -46,12 +46,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>expected_authority_names</key>
-				<array>
-					<string>Developer ID Installer: Rocket.Chat Technologies Corp. (S6UPZG7ZR3)</string>
-					<string>Developer ID Certification Authority</string>
-					<string>Apple Root CA</string>
-				</array>
 				<key>input_path</key>
 				<string>%pathname%</string>
 			</dict>
