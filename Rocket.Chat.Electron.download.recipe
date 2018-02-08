@@ -13,7 +13,7 @@
 		<key>GITHUB_REPO</key>
 		<string>RocketChat/Rocket.Chat.Electron</string>
 		<key>NAME</key>
-		<string>Rocket.Chat.Electron</string>
+		<string>rocketchat</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
@@ -22,6 +22,8 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>asset_regex</key>
+				<string>rocketchat-.+\.dmg</string>
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
 			</dict>
@@ -32,7 +34,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%-%version%.pkg</string>
+				<string>%NAME%-%version%.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
