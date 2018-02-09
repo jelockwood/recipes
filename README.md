@@ -2,7 +2,7 @@
 Autopkg recipies
 These are my personal AutoPkg recipes.
 
-The Draw.io one replaces the currently broken one at - https://github.com/autopkg/peshay-recipes/tree/master/drawio it ;scks a vaid munki recipe.
+The Draw.io one replaces the currently broken one at - https://github.com/autopkg/peshay-recipes/tree/master/drawio it lacks a vaid munki recipe.
 
 The Rocket.Chat+ one is a new one since there was no existing one I could find.
 
