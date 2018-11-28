@@ -45,7 +45,7 @@
 				<key>overwrite</key>
 				<true/>
 				<key>source_path</key>
-				<string>%pathname%/org.gpgtools/Libmacgpg</string>
+				<string>%pathname%/org.gpgtools.Libmacgpg</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
