@@ -15,8 +15,6 @@
 		<key>NAME</key>
 		<string>libmacgpg-free</string>
 	</dict>
-	<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
-        <string>True</string>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>Process</key>
