@@ -33,7 +33,7 @@
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>2018.4</string>
+	<string>1.0.0</string>
 	<key>ParentRecipe</key>
 	<string>com.github.jelockwood.recipes.download.libmacgpg-free</string>
 	<key>Process</key>
