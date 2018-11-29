@@ -11,7 +11,7 @@
 	<key>Input</key>
 	<dict>
 		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
-		<false/>
+		<true/>
 		<key>GITHUB_REPO</key>
 		<string>macgpg/libmacgpg-free</string>
 		<key>NAME</key>
