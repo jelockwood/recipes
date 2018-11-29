@@ -20,7 +20,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jelockwood.download.libmacgpg-free</string>
+	<string>com.github.jelockwood.recipes.download.libmacgpg-free</string>
 	<key>Process</key>
 	<array>
 		<dict>
