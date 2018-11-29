@@ -70,7 +70,15 @@
 install_dir=`dirname $0`
 
 # Install Libmacgpg-free unattended-ly using the pkg from the resources directory
-"${install_dir}/AccuBarcode Pro Installer.app/Contents/MacOS/JavaApplicationStub" -q</string>
+if[ -d "/Library/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc/Contents/MacOS" ]
+then
+	/bin/cp "$install_dir/org.gpgtools.Libmacgpg" "/Library/Application Support/GPGTools/org.gpgtools.Libmacgpg/xpc/Contents/MacOS/"
+	/bin/chmod 755 "/Library/Application Support/GPGTools/org.gpgtools.Libmacgog.xpc/Contents/MacOS/org.gpgtools.Libmacgpg"
+	/bin/launchctl stop org.gpgtools.Libmacgpg.xpc
+	/usr/bin/killall org.gpgtools.Libmacgpg.xpc
+	/bin/launchctl start org.gpgtools.Libmacgpg.xpc
+fi
+				</string>
 				<key>file_mode</key>
 				<string>0755</string>
 				<key>file_path</key>
@@ -99,6 +107,17 @@ install_dir=`dirname $0`
 					<key>version</key>
 					<string>%version%</string>
 				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>PathDeleter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>path_list</key>
+				<array>
+					<string>%RECIPE_CACHE_DIR%/Scripts</string>
+				</array>
 			</dict>
 		</dict>
 	</array>
