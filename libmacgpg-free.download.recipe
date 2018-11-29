@@ -29,6 +29,7 @@
 			<string>GitHubReleasesInfoProvider</string>
 		</dict>
 		<dict>
+			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
 				<string>org.gpgtools.Libmacgpg</string>
