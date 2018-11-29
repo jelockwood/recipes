@@ -26,26 +26,28 @@
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pkgdirs</key>
-				<dict/>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
-			</dict>
 			<key>Processor</key>
 			<string>PkgRootCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
+				<key>pkgdirs</key>
+				<dict/>
+			</dict>
 		</dict>
 		<dict>
+			<key>Processor</key>
+			<string>GitHubReleasesInfoProvider</string>
 			<key>Arguments</key>
 			<dict>
 				<key>github_repo</key>
 				<string>macgpg/libmacgpg-free</string>
 			</dict>
-			<key>Processor</key>
-			<string>GitHubReleasesInfoProvider</string>
 		</dict>
 		<dict>
+			<key>Processor</key>
+			<string>Copier</string>
 			<key>Arguments</key>
 			<dict>
 				<key>source_path</key>
@@ -55,10 +57,10 @@
 				<key>overwrite</key>
 				<true/>
 			</dict>
-			<key>Processor</key>
-			<string>Copier</string>
 		</dict>
 		<dict>
+			<key>Processor</key>
+			<string>FileCreator</string>
 			<key>Arguments</key>
 			<dict>
 				<key>file_content</key>
@@ -74,10 +76,10 @@ install_dir=`dirname $0`
 				<key>file_path</key>
 				<string>%RECIPE_CACHE_DIR%/Scripts/postinstall</string>
 			</dict>
-			<key>Processor</key>
-			<string>FileCreator</string>
 		</dict>
 		<dict>
+			<key>Processor</key>
+			<string>PkgCreator</string>
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_request</key>
@@ -98,8 +100,6 @@ install_dir=`dirname $0`
 					<string>%version%</string>
 				</dict>
 			</dict>
-			<key>Processor</key>
-			<string>PkgCreator</string>
 		</dict>
 	</array>
 </dict>
