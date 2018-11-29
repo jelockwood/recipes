@@ -10,6 +10,12 @@
 	<dict>
 		<key>NAME</key>
 		<string>libmacgpg-free</string>
+		<key>VENDOR</key>
+		<string>macgpg</string>
+		<key>SOFTWARETITLE</key>
+		<string>libmacgpg-free installer</string>
+		<key>NAMEWITHOUTSPACES</key>
+		<string>libmacgpginstaller</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
