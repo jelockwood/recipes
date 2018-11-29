@@ -29,6 +29,10 @@
 			<string>GitHubReleasesInfoProvider</string>
 		</dict>
 		<dict>
+			<dict>
+				<key>filename</key>
+				<string>org.gpgtools.Libmacgpg</string>
+			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 		</dict>
