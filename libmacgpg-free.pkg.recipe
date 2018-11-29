@@ -59,25 +59,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>file_content</key>
-				<string>#!/bin/bash
-
-# Determine working directory
-install_dir=`dirname $0`
-
-# Install Libmacgpg-free unattended-ly using the pkg from the resources directory
-"${install_dir}/AccuBarcode Pro Installer.app/Contents/MacOS/JavaApplicationStub" -q</string>
-				<key>file_mode</key>
-				<string>0755</string>
-				<key>file_path</key>
-				<string>%RECIPE_CACHE_DIR%/Scripts/postinstall</string>
-			</dict>
-			<key>Processor</key>
-			<string>FileCreator</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>pkg_request</key>
 				<dict>
 					<key>chown</key>
