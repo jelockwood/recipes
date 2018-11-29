@@ -99,17 +99,6 @@ install_dir=`dirname $0`
 			<key>Processor</key>
 			<string>PkgCreator</string>
 		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>path_list</key>
-				<array>
-					<string>%RECIPE_CACHE_DIR%/Scripts/org.gpgtools.Libmacgpg</string>
-				</array>
-			</dict>
-			<key>Processor</key>
-			<string>PathDeleter</string>
-		</dict>
 	</array>
 </dict>
 </plist>
