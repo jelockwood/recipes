@@ -8,6 +8,8 @@
 	<string>com.github.jelockwood.recipes.pkg.libmacgpg-free</string>
 	<key>Input</key>
 	<dict>
+		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
+		<true/>
 		<key>NAME</key>
 		<string>libmacgpg-free</string>
 		<key>VENDOR</key>
