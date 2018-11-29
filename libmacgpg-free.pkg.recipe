@@ -77,6 +77,8 @@ then
 	/bin/launchctl stop org.gpgtools.Libmacgpg.xpc
 	/usr/bin/killall org.gpgtools.Libmacgpg.xpc
 	/bin/launchctl start org.gpgtools.Libmacgpg.xpc
+else
+	exit 1
 fi
 				</string>
 				<key>file_mode</key>
