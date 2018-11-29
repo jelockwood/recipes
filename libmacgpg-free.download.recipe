@@ -10,6 +10,8 @@
 	<string>com.github.jelockwood.recipes.download.libmacgpg-free</string>
 	<key>Input</key>
 	<dict>
+		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
+		<true/>
 		<key>GITHUB_REPO</key>
 		<string>macgpg/libmacgpg-free</string>
 		<key>NAME</key>
@@ -40,6 +42,15 @@
 		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pathname%</string>
+			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
 		</dict>
 	</array>
 </dict>
