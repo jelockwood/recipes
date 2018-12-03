@@ -53,7 +53,7 @@
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/Downloads/org.gpgtools.Libmacgpg</string>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/Scripts/org.gpgtools.Libmacgpg</string>
+				<string>%pkgroot%/org.gpgtools.Libmacgpg</string>
 				<key>overwrite</key>
 				<true/>
 			</dict>
