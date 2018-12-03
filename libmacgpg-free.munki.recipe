@@ -22,6 +22,8 @@
 			</array>
 			<key>description</key>
 			<string>Libmacgpg-free is a drop-in-replacement for GPG Suite Libmacgpg removing the paywall.</string>
+			<key>category</key>
+			<string>Productivity</string>
 			<key>developer</key>
 			<string>macgpg</string>
 			<key>display_name</key>
