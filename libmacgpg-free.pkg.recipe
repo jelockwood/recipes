@@ -84,7 +84,7 @@ install_dir=`dirname $0`
 if [ -d "/Library/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc/Contents/MacOS" ]
 then
 	/bin/cp "$install_dir/org.gpgtools.Libmacgpg" "/Library/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc/Contents/MacOS/"
-	/bin/chmod 755 "/Library/Application Support/GPGTools/org.gpgtools.Libmacgog.xpc/Contents/MacOS/org.gpgtools.Libmacgpg"
+	/bin/chmod 755 "/Library/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc/Contents/MacOS/org.gpgtools.Libmacgpg"
 	/bin/launchctl stop org.gpgtools.Libmacgpg.xpc
 	/usr/bin/killall org.gpgtools.Libmacgpg.xpc
 	/bin/launchctl start org.gpgtools.Libmacgpg.xpc
