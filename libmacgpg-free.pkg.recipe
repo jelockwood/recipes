@@ -81,7 +81,7 @@
 install_dir=`dirname $0`
 
 # Install Libmacgpg-free unattended-ly using the pkg from the resources directory
-if[ -d "/Library/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc/Contents/MacOS" ]
+if [ -d "/Library/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc/Contents/MacOS" ]
 then
 	/bin/cp "$install_dir/org.gpgtools.Libmacgpg" "/Library/Application Support/GPGTools/org.gpgtools.Libmacgpg/xpc/Contents/MacOS/"
 	/bin/chmod 755 "/Library/Application Support/GPGTools/org.gpgtools.Libmacgog.xpc/Contents/MacOS/org.gpgtools.Libmacgpg"
