@@ -10,10 +10,10 @@
 	<string>com.github.jelockwood.recipes.munki.libmacgpg-free</string>
 	<key>Input</key>
 	<dict>
-		<key>MUNKI_REPO_SUBDIR</key>
-		<string>%NAME%</string>
 		<key>NAME</key>
 		<string>libmacgpgfree</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>libmacgpg</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -35,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jelockwood.recipes.download.libmacgpg-free</string>
+	<string>com.github.jelockwood.recipes.pkg.libmacgpg-free</string>
 	<key>Process</key>
 	<array>
 		<dict>
