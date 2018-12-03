@@ -31,6 +31,17 @@
 			<key>Arguments</key>
 			<dict>
 				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/Scripts</string>
+				<key>pkgdirs</key>
+				<dict/>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgroot</key>
 				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
 				<key>pkgdirs</key>
 				<dict/>
@@ -53,7 +64,7 @@
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/Downloads/org.gpgtools.Libmacgpg</string>
 				<key>destination_path</key>
-				<string>%pkgroot%/org.gpgtools.Libmacgpg</string>
+				<string>%RECIPE_CACHE_DIR%/Scripts/org.gpgtools.Libmacgpg</string>
 				<key>overwrite</key>
 				<true/>
 			</dict>
