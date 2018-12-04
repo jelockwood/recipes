@@ -86,7 +86,7 @@ then
 	/bin/cp "$install_dir/org.gpgtools.Libmacgpg" "/Library/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc/Contents/MacOS/"
 	/bin/chmod 755 "/Library/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc/Contents/MacOS/org.gpgtools.Libmacgpg"
 	/bin/launchctl stop org.gpgtools.Libmacgpg.xpc
-	/usr/bin/killall org.gpgtools.Libmacgpg.xpc
+	/usr/bin/killall org.gpgtools.Libmacgpg
 	/bin/launchctl start org.gpgtools.Libmacgpg.xpc
 else
 	exit 1
