@@ -98,6 +98,7 @@ else
 	/usr/bin/logger -is "GPGTools directory not exist"
 	exit 1
 fi
+exit 0
 				</string>
 				<key>file_mode</key>
 				<string>0755</string>
