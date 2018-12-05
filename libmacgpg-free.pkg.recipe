@@ -83,12 +83,14 @@ install_dir=`dirname $0`
 # Install Libmacgpg-free unattended-ly using the pkg from the resources directory
 if [ -d "/Library/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc/Contents/MacOS" ]
 then
-	/bin/cp "$install_dir/org.gpgtools.Libmacgpg" "/Library/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc/Contents/MacOS/"
-	/bin/chmod 755 "/Library/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc/Contents/MacOS/org.gpgtools.Libmacgpg"
-	/bin/launchctl stop org.gpgtools.Libmacgpg.xpc
-	/usr/bin/killall org.gpgtools.Libmacgpg
-	/bin/launchctl start org.gpgtools.Libmacgpg.xpc
+	/usr/bin/logger -is "GPGTools directory exists"
+	/bin/cp "$install_dir/org.gpgtools.Libmacgpg" "/Library/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc/Contents/MacOS/" 2> >(/usr/bin/logger -is)
+	/bin/chmod 755 "/Library/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc/Contents/MacOS/org.gpgtools.Libmacgpg" 2> >(/usr/bin/logger -is)
+	/bin/launchctl stop org.gpgtools.Libmacgpg.xpc 2> >(/usr/bin/logger -is)
+	/usr/bin/killall org.gpgtools.Libmacgpg 2> >(/usr/bin/logger -is)
+	/bin/launchctl start org.gpgtools.Libmacgpg.xpc 2> >(/usr/bin/logger -is)
 else
+	/usr/bin/logger -is "GPGTools directory not exist"
 	exit 1
 fi
 				</string>
