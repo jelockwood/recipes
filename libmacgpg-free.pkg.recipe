@@ -87,7 +87,7 @@ then
 	/bin/cp "$install_dir/org.gpgtools.Libmacgpg" "/Library/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc/Contents/MacOS/" 2> >(/usr/bin/logger -is)
 	/bin/chmod 755 "/Library/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc/Contents/MacOS/org.gpgtools.Libmacgpg" 2> >(/usr/bin/logger -is)
 	/bin/launchctl stop org.gpgtools.Libmacgpg.xpc 2> >(/usr/bin/logger -is)
-	processid=`/bin/ps -ef | awk '$NF~"bluetooth" {print $2}'`
+	processid=`/bin/ps -ef | awk '$NF~"org.gpgtools.Libmacgpg" {print $2}'`
 	if [ ! -z "$processid" ]
 	then
 		/usr/bin/logger -is "\$processid is NOT empty"
@@ -98,6 +98,7 @@ else
 	/usr/bin/logger -is "GPGTools directory not exist"
 	exit 1
 fi
+exit 0
 				</string>
 				<key>file_mode</key>
 				<string>0755</string>
