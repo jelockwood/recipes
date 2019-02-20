@@ -23,7 +23,9 @@
 			<key>description</key>
 			<string>A script for finding your Mac</string>
 			<key>developer</key>
-			<string></string>
+			<string>John Lockwood</string>
+			<key>category</key>
+			<string>Utilities</string>
 			<key>display_name</key>
 			<string>pinpoint</string>
 			<key>name</key>
