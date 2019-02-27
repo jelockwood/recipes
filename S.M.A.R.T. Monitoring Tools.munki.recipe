@@ -17,7 +17,7 @@
 		<key>NAME</key>
 		<string>smartmontools</string>
 		<key>SOURCEFORGE_FILE_PATTERN</key>
-		<string>smartmontools-*\.dmg</string>
+		<string>[0-9\.]*\.dmg</string>
 		<key>SOURCEFORGE_PROJECT_ID</key>
 		<string>64297</string>
 		<key>pkginfo</key>
