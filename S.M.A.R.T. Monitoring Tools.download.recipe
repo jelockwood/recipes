@@ -20,13 +20,15 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>SOURCEFORGE_FILE_PATTERN</key>
-				<string>\.dmg</string>
-				<key>SOURCEFORGE_PROJECT_ID</key>
-				<integer>64297</integer>
+				<key>SOURCEFORGE_PROJECT_NAME</key>
+				<string>smartmontools</string>
 			</dict>
 			<key>Processor</key>
-			<string>com.github.jessepeterson.munki.GrandPerspective/SourceForgeURLProvider</string>
+			<string>com.github.n8felton.shared/SourceForgeBestReleaseURLProvider</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.n8felton.shared/RemoteFilenameFinder</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
@@ -40,6 +42,10 @@
 		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.n8felton.shared/MD5Checksum</string>
 		</dict>
 	</array>
 </dict>
