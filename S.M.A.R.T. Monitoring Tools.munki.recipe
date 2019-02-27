@@ -23,7 +23,7 @@
 			<key>description</key>
 			<string>Disk Inspection and Monitoring</string>
 			<key>developer</key>
-			<string>ballen4705, chrfranke, dipohl</string>
+			<string>smartmontools</string>
 			<key>category</key>
 			<string>Utilities</string>
 			<key>display_name</key>
