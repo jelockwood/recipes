@@ -54,7 +54,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%-%VERSION%.dmg</string>
+				<string>%NAME%.dmg</string>
 			</dict>
 		</dict>
 		<dict>
