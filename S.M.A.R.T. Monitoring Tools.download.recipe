@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>SOURCEFORGE_FILE_PATTERN</key>
-				<string>\.dmg</string>
+				<string>\.dmg$</string>
 				<key>SOURCEFORGE_PROJECT_ID</key>
 				<integer>64297</integer>
 			</dict>
