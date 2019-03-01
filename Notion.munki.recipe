@@ -24,6 +24,8 @@
 			<string>All-in-one workspace. Write, plan, collaborate, and get organized. Notion is all you need — in one tool.</string>
 			<key>developer</key>
 			<string>Notion Labs, Inc.</string>
+			<key>category</key>
+			<string>Applications</string>
 			<key>display_name</key>
 			<string>Notion</string>
 			<key>name</key>
