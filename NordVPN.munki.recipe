@@ -30,6 +30,8 @@
 			<string>Military-grade protection online.</string>
 			<key>developer</key>
 			<string>TEFINKOM &amp; CO S.A</string>
+			<key>category</key>
+			<string>Utilities</string>
 			<key>display_name</key>
 			<string>NordVPN</string>
 			<key>name</key>
