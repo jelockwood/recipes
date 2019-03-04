@@ -10,8 +10,6 @@
 	<string>com.github.jelockwood.recipes.download.Notion</string>
 	<key>Input</key>
 	<dict>
-		<key>DOWNLOAD_URL</key>
-		<string>https://desktop-release.notion-static.com/Notion-1.0.4.dmg</string>
 		<key>NAME</key>
 		<string>Notion</string>
 	</dict>
@@ -36,7 +34,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%-%version%.dmg<string>
+				<string>%NAME%.dmg<string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
