@@ -26,26 +26,13 @@
 				<integer>64297</integer>
 			</dict>
 			<key>Processor</key>
-			<string>SourceForgeURLProvider</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>url</key>
-				<string>downloadurl</string>
-				<key>result_output_var_name</key>
-				<string>version</string>
-				<key>re_pattern</key>
-				<string>[0-9]+(\.|-[0-9]+)</string>
-			</dict>
-			<key>Processor</key>
-			<string>URLTextSearcher</string>
+			<string>com.github.jessepeterson.munki.GrandPerspective/SourceForgeURLProvider</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%-%version%.dmg</string>
+				<string>%NAME%.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
