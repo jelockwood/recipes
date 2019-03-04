@@ -31,7 +31,7 @@ class SourceForgeURLProvider(Processor):
 			},
 	}
 	output_variables = {
-		'url': {
+		'downloadurl': {
 			'description': 'URL to the latest SourceForge project download'
 		}
 	}
