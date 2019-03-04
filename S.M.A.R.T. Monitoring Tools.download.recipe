@@ -26,7 +26,7 @@
 				<integer>64297</integer>
 			</dict>
 			<key>Processor</key>
-			<string>com.github.jelockwood.recipes/SourceForgeURLProvider</string>
+			<string>SourceForgeURLProvider</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
