@@ -22,13 +22,22 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>%DOWNLOAD_URL%</string>
+				<string>https://www.notion.so/desktop</string>
+				<key>re_pattern</key>
+				<string>https://[\S]+\Notion-[\S]+\.dmg</string>
+				<key>result_output_var_name</key>
+				<string>url</string>
 			</dict>
 			<key>Processor</key>
-			<string>URLDownloader</string>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%-%version%.dmg<string>
+			</dict>
 		</dict>
 		<dict>
 			<key>Processor</key>
