@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of S.M.A.R.T. Monitoring Tools.</string>
 	<key>Identifier</key>
-	<string>com.github.jelockwood.recipes.download.smartmontools</string>
+	<string>com.github.jelockwood.recipes.download.S.M.A.R.T.MonitoringTools</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -32,7 +32,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>smartmontools-%version%.dmg</string>
+				<string>%NAME%-%version%.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
