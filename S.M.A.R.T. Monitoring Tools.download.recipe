@@ -26,13 +26,13 @@
 				<integer>64297</integer>
 			</dict>
 			<key>Processor</key>
-			<string>com.github.jelockwood.munki.GrandPerspective/SourceForgeURLProvider</string>
+			<string>com.github.jelockwood.recipes/SourceForgeURLProvider</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>url</string>
+				<string>downloadurl</string>
 				<key>result_output_var_name</key>
 				<string>version</string>
 				<key>re_pattern</key>
