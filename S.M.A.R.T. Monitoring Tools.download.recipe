@@ -7,11 +7,11 @@
 	<key>Description</key>
 	<string>Downloads the latest version of S.M.A.R.T. Monitoring Tools.</string>
 	<key>Identifier</key>
-	<string>com.github.jelockwood.recipes.download.S.M.A.R.T.MonitoringTools</string>
+	<string>com.github.jelockwood.recipes.download.smartmontools</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>S.M.A.R.T. Monitoring Tools</string>
+		<string>smartmontools</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
