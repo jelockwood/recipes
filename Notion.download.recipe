@@ -23,7 +23,7 @@
 				<key>url</key>
 				<string>https://www.notion.so/desktop</string>
 				<key>re_pattern</key>
-				<string>https://[\S]+\Notion-[\S]+\.dmg</string>
+				<string>https:\/\/desktop-release.notion-static.com\/Notion-[0-9]+(\.[0-9]+)+\.dmg</string>
 				<key>result_output_var_name</key>
 				<string>url</string>
 			</dict>
