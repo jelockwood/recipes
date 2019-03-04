@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of S.M.A.R.T. Monitoring Tools and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.jelockwood.recipes.munki.S.M.A.R.T.MonitoringTools</string>
+	<string>com.github.jelockwood.recipes.munki.smartmontools</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -37,7 +37,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jelockwood.recipes.download.S.M.A.R.T.MonitoringTools</string>
+	<string>com.github.jelockwood.recipes.download.smartmontools</string>
 	<key>Process</key>
 	<array>
 		<dict>
