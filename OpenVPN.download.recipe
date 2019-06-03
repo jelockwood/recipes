@@ -23,7 +23,7 @@
                     <key>url</key>
                     <string>https://swupdate.openvpn.net/as/clients</string>
                     <key>filename</key>
-                    <string>%NAME%_signed.dmg</string>
+                    <string>%NAME%-.+\_signed.dmg</string>
                     <key>request_headers</key>
                     <dict>
                         <key>user-agent</key>
