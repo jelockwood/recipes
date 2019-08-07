@@ -17,7 +17,7 @@
         </dict>
         <key>MinimumVersion</key>
         <string>0.2.0</string>
-    <key>Process</key>
+	<key>Process</key>
 	<array>
 		<dict>
 			<key>Processor</key>
@@ -27,20 +27,7 @@
 				<key>url</key>
 				<string>https://sourcegear.com/diffmerge/downloaded.php</string>
 				<key>re_pattern</key>
-				<string>href="http://download.sourcegear.com/DiffMerge/.*.intel.stable.dmg</string>
-				<key>result_output_var_name</key>
-				<string>url</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>URLTextSearcher</string>
-			<key>Arguments</key>
-			<dict>
-				<key>url</key>
-				<string>%url%</string>
-				<key>re_pattern</key>
-				<string>(.*.intel.stable.dmg)</string>
+				<string>"(http://download.sourcegear.com/DiffMerge/.*.intel.stable.dmg)"</string>
 				<key>result_output_var_name</key>
 				<string>url</string>
 			</dict>
@@ -51,7 +38,7 @@
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>http://download.sourcegear.com/DiffMerge/%url%</string>
+				<string>%url%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
