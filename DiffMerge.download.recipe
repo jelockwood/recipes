@@ -27,7 +27,7 @@
 				<key>url</key>
 				<string>https://sourcegear.com/diffmerge/downloaded.php</string>
 				<key>re_pattern</key>
-				<string>"(http://download.sourcegear.com/DiffMerge/.*.intel.stable.dmg)"</string>
+				<string>(href="http://download.sourcegear.com/DiffMerge/.*.intel.stable.dmg)</string>
 				<key>result_output_var_name</key>
 				<string>url</string>
 			</dict>
