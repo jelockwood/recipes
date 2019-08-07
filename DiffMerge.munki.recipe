@@ -23,7 +23,9 @@
 			<key>description</key>
 			<string>Visually compare and merge files.</string>
 			<key>developer</key>
-			<string></string>
+			<string>SourceGear</string>
+			<key>category</key>
+			<string>Utilities</string>
 			<key>display_name</key>
 			<string>DiffMerge</string>
 			<key>name</key>
