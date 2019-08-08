@@ -29,10 +29,10 @@
 					<string>--request</string>
 					<string>POST</string>
 					<string>--data</string>
-					<string>download=Download%20Now&amp;DMdownloadVersion=mac_pkg</string>
+					<string>download=Download%20Now&amp;DMdownloadVersion=mac_dmg</string>
 				</array>
 				<key>re_pattern</key>
-				<string>href="(http:\/\/download\.sourcegear\.com\/DiffMerge\/[\d\.]+/DiffMerge\.[\d\.]+\.intel\.stable\.pkg)"</string>
+				<string>href="(http:\/\/download\.sourcegear\.com\/DiffMerge\/[\d\.]+/DiffMerge\.[\d\.]+\.intel\.stable\.dmg)"</string>
 				<key>url</key>
 				<string>http://www.sourcegear.com/diffmerge/downloaded.php</string>
 			</dict>
