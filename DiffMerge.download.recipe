@@ -24,24 +24,29 @@
 			<string>URLTextSearcher</string>
 			<key>Arguments</key>
 			<dict>
-				<key>url</key>
-				<string>https://sourcegear.com/diffmerge/downloaded.php</string>
+				<key>curl_opts</key>
+				<array>
+					<string>--request</string>
+					<string>POST</string>
+					<string>--data</string>
+					<string>download=Download%20Now&amp;DMdownloadVersion=mac_pkg</string>
+				</array>
 				<key>re_pattern</key>
-				<string>href="(http://download.sourcegear.com/DiffMerge/.*\.intel\.stable\.dmg)</string>
-				<key>result_output_var_name</key>
-				<string>url</string>
+				<string>href="(http:\/\/download\.sourcegear\.com\/DiffMerge\/[\d\.]+/DiffMerge\.[\d\.]+\.intel\.stable\.pkg)"</string>
+				<key>url</key>
+				<string>http://www.sourcegear.com/diffmerge/downloaded.php</string>
 			</dict>
 		</dict>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>filename</key>
-				<string>%NAME%.dmg</string>
-				<key>url</key>
-				<string>%url%</string>
-			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>curl_opts</key>
+				<array/>
+				<key>url</key>
+				<string>%match%</string>
+			</dict>
 		</dict>
 		<dict>
 			<key>Processor</key>
