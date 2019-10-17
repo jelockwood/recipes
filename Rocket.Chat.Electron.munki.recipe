@@ -31,6 +31,8 @@
 			<key>unattended_install</key>
 			<true/>
 		</dict>
+		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
+	        <string>True</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
