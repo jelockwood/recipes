@@ -22,6 +22,8 @@
 			<string>AdoptOpenJDK 13 HotSpot</string>
 			<key>developer</key>
 			<string>AdoptOpenJDK</string>
+			<key>display_name</key>
+			<string>AdoptOpenJDK 13</string>
 			<key>name</key>
 			<string>AdoptOpenJDK 13</string>
 			<key>unattended_install</key>
