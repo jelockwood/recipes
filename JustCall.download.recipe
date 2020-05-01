@@ -25,7 +25,7 @@
 				<key>url</key>
 				<string>https://justcall.io/call-center-software-features/click-to-call-using-voip-dialer/</string>
 				<key>re_pattern</key>
-				<string>(/JustCall-*.dmg)</string>
+				<string>(/JustCall-.*.dmg)</string>
 				<key>result_output_var_name</key>
 				<string>url</string>
 			</dict>
