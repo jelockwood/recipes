@@ -16,27 +16,35 @@
         <key>MinimumVersion</key>
         <string>0.2.0</string>
         <key>Process</key>
-        <array>
-            <dict>
-                <key>Arguments</key>
-                <dict>
-                    <key>url</key>
-                    <string>https://justcall.io/call-center-software-features/click-to-call-using-voip-dialer/</string>
-                    <key>filename</key>
-                    <string>%NAME%.dmg</string>
-                    <key>request_headers</key>
-                    <dict>
-                        <key>user-agent</key>
-                        <string>%USER_AGENT%</string>
-                    </dict>
-                </dict>
-                <key>Processor</key>
-                <string>URLDownloader</string>
-            </dict>
-            <dict>
-                <key>Processor</key>
-                <string>EndOfCheckPhase</string>
-            </dict>
-        </array>
-    </dict>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://justcall.io/call-center-software-features/click-to-call-using-voip-dialer/</string>
+				<key>re_pattern</key>
+				<string>(/JustCall-*.dmg)</string>
+				<key>result_output_var_name</key>
+				<string>url</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
+				<key>url</key>
+				<string>https://justcall.io/%url%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
 </plist>
