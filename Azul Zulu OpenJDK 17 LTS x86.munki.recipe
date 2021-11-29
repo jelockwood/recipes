@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>AzulZuluOpenJDK11LTSx86</string>
+        <string>AzulZuluOpenJDK17LTSx86</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps</string>
         <key>pkginfo</key>
