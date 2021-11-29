@@ -54,7 +54,7 @@ Set the ARCHITECTURE key to "x" to download the Intel version or "aarch" for App
                     <string>Apple Root CA</string>
                 </array>
                 <key>input_path</key>
-                <string>%pathname%/Double-Click to Install Azul Zulu JDK 17 x86.pkg</string>
+                <string>%pathname%/Double-Click to Install Azul Zulu JDK 17.pkg</string>
             </dict>
         </dict>
     </array>
