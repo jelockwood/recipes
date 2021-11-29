@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the current release version of Azul Zulu OpenJDK 17 LTS, builds a package and imports it to Munki.</string>
     <key>Identifier</key>
-    <string>com.github.jelockwood.munki.Azul Zulu OpenJDK 11 LTS x86</string>
+    <string>com.github.jelockwood.munki.Azul Zulu OpenJDK 17 LTS x86</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
