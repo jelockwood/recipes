@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of IntelliJ IDEA Ultimate Edition and imports into Munki.</string>
+    <string>Downloads the current release version of PyCharm Professional Edition and imports into Munki.</string>
     <key>Comment</key>
     <string>For the SUPPORTED_ARCH variable use "x86_64" for Intel, use "arm64" for Apple Silicon</string>
     <key>Identifier</key>
@@ -58,7 +58,7 @@ https://www.jetbrains.com/idea</string>
             <key>Arguments</key>
             <dict>
                 <key>munkiimport_appname</key>
-                <string>IntelliJ IDEA.app</string>
+                <string>PyCharm.app</string>
                 <key>pkg_path</key>
                 <string>%pathname%</string>
                 <key>repo_subdirectory</key>
