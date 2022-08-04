@@ -7,7 +7,7 @@
     <key>Comment</key>
     <string>For the ARCH_TYPE variable use "mac" for Intel, use "macM1" for Apple Silicon</string>
     <key>Identifier</key>
-    <string>com.github.bnpl.autopkg.download.pycharm-ue-arm</string>
+    <string>com.jelockwod.download.pycharm-ue-arm</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
