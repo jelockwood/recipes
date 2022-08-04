@@ -7,7 +7,7 @@
     <key>Comment</key>
     <string>For the SUPPORTED_ARCH variable use "x86_64" for Intel, use "arm64" for Apple Silicon</string>
     <key>Identifier</key>
-    <string>com.github.jelockwood.recipes.munki.pycharm-ue-arm</string>
+    <string>com.github.jelockwood.recipes.munki.pycharm-ue-intel</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
