@@ -49,7 +49,7 @@ https://www.jetbrains.com/idea</string>
     <key>MinimumVersion</key>
     <string>0.4.3</string>
     <key>ParentRecipe</key>
-    <string>com.github.jelockwood.recpies.download.intellijideaue-arm</string>
+    <string>com.github.jelockwood.recipes.download.intellijideaue-arm</string>
     <key>Process</key>
     <array>
         <dict>
