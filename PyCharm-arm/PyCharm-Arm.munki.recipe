@@ -38,7 +38,7 @@ for Professional Developers</string>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.jelockwood.recipe.download.PyCharm</string>
+	<string>com.jelockwood.recipe.download.PyCharm-Arm</string>
 	<key>Process</key>
 	<array>
 		<dict>
