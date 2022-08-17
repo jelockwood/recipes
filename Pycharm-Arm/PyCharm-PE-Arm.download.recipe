@@ -7,7 +7,7 @@
     <key>Comment</key>
     <string>For the ARCH_TYPE variable use "mac" for Intel, use "macM1" for Apple Silicon</string>
     <key>Identifier</key>
-    <string>com.github.jelockwood.recipes.download.pycharmpe-arm</string>
+    <string>com.github.jelockwood.recipes.download.pycharm-pe-arm</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
