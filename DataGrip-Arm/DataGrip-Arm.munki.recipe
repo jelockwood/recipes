@@ -11,7 +11,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>DataGrip</string>
+        <string>DataGrip - Arm</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/jetbrains</string>
         <key>SUPPORTED_ARCH</key>
