@@ -34,7 +34,7 @@
 				<key>re_pattern</key>
 				<string>href="(http:\/\/download\.sourcegear\.com\/DiffMerge\/[\d\.]+/DiffMerge\.[\d\.]+\.intel\.stable\.dmg)"</string>
 				<key>url</key>
-				<string>http://www.sourcegear.com/diffmerge/downloaded.php</string>
+				<string>https://www.sourcegear.com/diffmerge/downloads.php</string>
 			</dict>
 		</dict>
 		<dict>
