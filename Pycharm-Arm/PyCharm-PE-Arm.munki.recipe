@@ -25,9 +25,9 @@
             <key>category</key>
             <string>Developer Tools</string>
             <key>description</key>
-            <string>Capable and ergonomic PyCharm IDE
+            <string>Python IDE for professional developers
 
-https://www.jetbrains.com/idea</string>
+https://www.jetbrains.com/pycharm</string>
             <key>developer</key>
             <string>JetBrains</string>
             <key>display_name</key>
