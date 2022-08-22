@@ -10,7 +10,9 @@
     <string>com.github.jelockwood.recipes.download.jetbrainstoolbox-arm</string>
     <key>Input</key>
     <dict>
-        <key>NAME</key>
+	<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
+        <string>True</string>
+	<key>NAME</key>
         <string>JetBrains Toolbox</string>
         <key>ARCH_TYPE</key>
         <string>macM1</string>
@@ -19,8 +21,6 @@
         <key>CSV_REQ</key>
 	<string>identifier "com.jetbrains.apps.activator" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "2ZEFAR8TH3"</string>
     </dict>
-    <key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
-    <string>True</string>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
     <key>ParentRecipe</key>
