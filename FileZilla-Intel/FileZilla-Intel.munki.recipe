@@ -21,11 +21,13 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string> </string>
+			<string>FileZilla®, the free FTP solution. The FileZilla Client not only supports FTP, but also FTP over TLS (FTPS) and SFTP. It is open source software distributed free of charge under the terms of the GNU General Public License.</string>
 			<key>developer</key>
 			<string>Tim Kosse</string>
+			<key>category</key>
+			<string>Utilities</string>
 			<key>display_name</key>
-			<string>FileZilla</string>
+			<string>FileZilla-Intel</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
