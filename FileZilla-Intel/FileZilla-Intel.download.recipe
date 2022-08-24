@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
 	<string>Downloads the latest version of FileZilla.</string>
 	<key>Identifier</key>
@@ -10,34 +12,21 @@
 	<dict>
 		<key>NAME</key>
 		<string>FileZilla</string>
-		<key>USER_AGENT</key>
-		<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36</string>
-		<key>STOPPROCESSINGIF_PREDICATE</key>
-		<string>download_changed == False</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Processor</key>
-			<string>URLTextSearcher</string>
 			<key>Arguments</key>
 			<dict>
-				<key>re_pattern</key>
-				<string>href="(https:\/\/dl[\d.].cdn.filezilla-project.org\/client\/FileZilla_[\d\.].[\d\.]+[\d\.]_macosx-x86.app.tar.bz2[^\r\n]*)"</string>
+				<key>filename</key>
+				<string>%NAME%.tgz</string>
 				<key>url</key>
-				<string>https://filezilla-project.org/download.php?show_all=1</string>
+				<string>href="(https:\/\/dl2.cdn.filezilla-project.org\/client\/FileZilla_[\d\.].[\d\.]+[\d\.]_macosx-x86.app.tar.bz2[^\r\n]*)"</string>
 			</dict>
-		</dict>
-		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
-			<key>Arguments</key>
-			<dict>
-				<key>url</key>
-				<string>%match%</string>
-			</dict>
 		</dict>
 		<dict>
 			<key>Processor</key>
@@ -46,23 +35,10 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>predicate</key>
-				<string>%STOPPROCESSINGIF_PREDICATE%</string>
-			</dict>
-			<key>Comment</key>
-			<string>Checks if the file already exists in the cache</string>
-			<key>Processor</key>
-			<string>StopProcessingIf</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>archive_path</key>
 				<string>%pathname%</string>
-				<key>archive_format</key>
-				<string>tar_bzip2</string>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%archivename%</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
