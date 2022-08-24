@@ -35,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.hansen-m.download.FileZilla</string>
+	<string>com.github.jelockwood.recipes.download.FileZilla-Intel</string>
 	<key>Process</key>
 	<array>
 		<dict>
