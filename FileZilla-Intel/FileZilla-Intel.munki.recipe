@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of FileZilla and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.jelockwood.recipe.munki.FileZilla</string>
+	<string>com.github.hansen-m.download.FileZilla</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
