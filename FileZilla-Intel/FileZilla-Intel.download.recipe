@@ -23,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string>href="(https:\/\/dl2.cdn.filezilla-project.org\/client\/FileZilla_[\d\.].[\d\.]+[\d\.]_macosx-x86.app.tar.bz2[^\r\n]*)"</string>
+				<string>href="(https:\/\/dl[\d.].cdn.filezilla-project.org\/client\/FileZilla_[\d\.].[\d\.]+[\d\.]_macosx-x86.app.tar.bz2[^\r\n]*)"</string>
 				<key>archive name</key>
 				<string>(FileZilla_[\d\.].[\d\.]+[\d\.]_macosx-x86.app.tar.bz2)</string>
 				<key>url</key>
