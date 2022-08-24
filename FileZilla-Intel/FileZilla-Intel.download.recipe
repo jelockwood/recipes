@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version FileZilla for Intel Mac Client.</string>
     <key>Identifier</key>
-    <string>com.github.jelockwood.recipes.download.FileZilla</string>
+    <string>com.github.jelockwood.recipes.download.FileZilla-Intel</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
