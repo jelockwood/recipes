@@ -26,7 +26,7 @@
 			<dict>
 				<key>re_pattern</key>
 				<string>href="(https:\/\/dl[\d.].cdn.filezilla-project.org\/client\/FileZilla_[\d\.].[\d\.]+[\d\.]_macosx-x86.app.tar.bz2[^\r\n]*)"</string>
-				<key>archive name</key>
+				<key>archivename</key>
 				<string>(FileZilla_[\d\.].[\d\.]+[\d\.]_macosx-x86.app.tar.bz2)</string>
 				<key>url</key>
 				<string>https://filezilla-project.org/download.php?show_all=1</string>
