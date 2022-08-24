@@ -5,9 +5,9 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of FileZilla and imports it into Munki.</string>
+	<string>Downloads the latest version of FileZilla for Intel Macs and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.hansen-m.download.FileZilla</string>
+	<string>com.github.jelockwood.autopkg.munki.FileZilla-Intel</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -35,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.jelockwood.recipe.download.FileZilla</string>
+	<string>com.github.hansen-m.download.FileZilla</string>
 	<key>Process</key>
 	<array>
 		<dict>
