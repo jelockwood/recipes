@@ -7,7 +7,7 @@
 		<key>Identifier</key>
 		<string>com.jelockwood.recipe.munki.Managed-Python3</string>
 		<key>ParentRecipe</key>
-		<string>com.github.jazzace.download.MacadminsPython</string>
+		<string>com.jelockwood.recipe.download.Managed-Python3</string>
 		<key>MinimumVersion</key>
 		<string>2.3.0</string>
 		<key>Input</key>
