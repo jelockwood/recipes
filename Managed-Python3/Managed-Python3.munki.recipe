@@ -37,6 +37,12 @@
 	<key>installs</key>
 	<array>
 		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.python.python</string>
+			<key>CFBundleName</key>
+			<string>Python</string>
+			<key>CFBundleVersionString</key>
+			<string>3.10.2</string>
 			<key>path</key>
 			<string>/Library/ManagedFrameworks/Python/Python3.framework/Versions/Current/Resources/Python.app</string>
 			<key>type</key>
