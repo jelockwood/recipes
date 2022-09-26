@@ -2,42 +2,61 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Python.</string>
+	<string>Downloads the most recent release signed pkg installer of 
+macadmins/python (“Recommended” build) from GitHub.
+
+In order to get the latest pre-release, set the Input variable INCLUDE_PRERELEASES to a non-empty
+string (such as 'True'; this is the default). If you just want the latest full release instead, 
+INCLUDE_PRERELEASES must be set to an empty string.</string>
 	<key>Identifier</key>
 	<string>com.jelockwood.recipe.download.Managed-Python3</string>
 	<key>Input</key>
 	<dict>
+		<key>INCLUDE_PRERELEASES</key>
+		<string></string>
 		<key>NAME</key>
 		<string>Managed-Python3</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>1.0.0</string>
+	<string>1.0</string>
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>github_repo</key>
-				<string>macadmins/python</string>
-			</dict>
 			<key>Processor</key>
 			<string>GitHubReleasesInfoProvider</string>
-		</dict>
-		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%-%version%.pkg</string>
+				<key>asset_regex</key>
+				<string>python_recommended_signed-[\d.]+.pkg</string>
+				<key>github_repo</key>
+				<string>macadmins/python</string>
+				<key>include_prereleases</key>
+				<string>%INCLUDE_PRERELEASES%</string>
 			</dict>
+		</dict>
+		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+			<key>Arguments</key>
+			<dict>
+				<key>expected_authority_names</key>
+				<array>
+					<string>Developer ID Installer: Clever DevOps Co. (9GQZ7KUFR6)</string>
+					<string>Developer ID Certification Authority</string>
+					<string>Apple Root CA</string>
+				</array>
+				<key>input_path</key>
+				<string>%pathname%</string>
+			</dict>
 		</dict>
 	</array>
 </dict>
