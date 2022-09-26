@@ -45,6 +45,13 @@
 			<string>CFBundleShortVersionString</string>
 		</dict>
 	</array>
+	<key>recipts</key>
+	<array>
+		<dict>
+			<key>packageid</key>
+			<string>org.macadmins.python.recommended<string>
+		</dict>
+	</array>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
