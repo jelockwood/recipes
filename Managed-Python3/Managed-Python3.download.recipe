@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Python.</string>
 	<key>Identifier</key>
-	<string>com.jelockwood.recipe.download.MAnaged-Python3</string>
+	<string>com.jelockwood.recipe.download.Managed-Python3</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
