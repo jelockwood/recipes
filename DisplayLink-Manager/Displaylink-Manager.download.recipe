@@ -19,7 +19,7 @@
 			<key>SEARCH_URL</key>
 			<string>products/displaylink-graphics/downloads/macos</string>
 			<key>LOGIN_EXTENSION_URL</key>
-			<string>https://www.synaptics.com/sites/default/files/exe_files/2021-02/macOS%20App%20LoginExtension-EXE.dmg</string>
+			<string>https://www.synaptics.com/sites/default/files/exe_files/2021-02/macOS%20App%20LoginExtension-EXE.pkg</string>
 		</dict>
 		<key>Process</key>
 		<array>
@@ -62,7 +62,7 @@
 				<key>Arguments</key>
 				<dict>
 					<key>filename</key>
-					<string>%SOFTWARE_TITLE%_Extension.dmg</string>
+					<string>%SOFTWARE_TITLE%_Extension.pkg</string>
 					<key>url</key>
 					<string>%LOGIN_EXTENSION_URL%</string>
 				</dict>
@@ -73,7 +73,7 @@
 				<key>Arguments</key>
 				<dict>
 					<key>pattern</key>
-					<string>%RECIPE_CACHE_DIR%/downloads/%SOFTWARE_TITLE%_Extension.dmg/*.pkg</string>
+					<string>%RECIPE_CACHE_DIR%/downloads/%SOFTWARE_TITLE%_Extension.pkg/*.pkg</string>
 				</dict>
 			</dict>
 			<dict>
