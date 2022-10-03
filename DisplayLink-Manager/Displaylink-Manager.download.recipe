@@ -107,7 +107,7 @@
 						<string>Apple Root CA</string>
 					</array>
 					<key>input_path</key>
-					<string>%RECIPE_CACHE_DIR%/downloads/%SOFTWARE_TITLE%_Extension.dmg/%found_basename%</string>
+					<string>%RECIPE_CACHE_DIR%/downloads/%SOFTWARE_TITLE%_Extension.pkg/%found_basename%</string>
 				</dict>
 			</dict>
 		</array>
