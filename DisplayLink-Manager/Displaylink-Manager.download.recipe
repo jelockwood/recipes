@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Description</key>
+		<string>Downloads the latest version of the DisplayLink Manager App.</string>
+		<key>Identifier</key>
+		<string>com.jelockwood.recipe.download.DisplayLink-Manager</string>
+		<key>MinimumVersion</key>
+		<real>2.3</real>
+		<key>Input</key>
+		<dict>
+			<key>NAME</key>
+			<string>DisplayLink Manager</string>
+			<key>SOFTWARE_TITLE</key>
+			<string>DisplayLink_Manager</string>
+			<key>BASE_URL</key>
+			<string>https://www.synaptics.com</string>
+			<key>SEARCH_URL</key>
+			<string>products/displaylink-graphics/downloads/macos</string>
+			<key>LOGIN_EXTENSION_URL</key>
+			<string>https://www.synaptics.com/sites/default/files/exe_files/2021-02/macOS%20App%20LoginExtension-EXE.dmg</string>
+		</dict>
+		<key>Process</key>
+		<array>
+			<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+					<key>re_pattern</key>
+					<string>(&lt;.*&gt;DisplayLink Manager Graphics Connectivity&lt;\/.*&gt;)((.|\n)*?)a href=\"(\/node\/\d*\?filetype=exe)</string>
+					<key>url</key>
+					<string>%BASE_URL%/%SEARCH_URL%</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+					<key>re_pattern</key>
+					<string>&lt;a.*href="(?P&lt;download_url&gt;.*[.]pkg)" download&gt;Accept&lt;\/a&gt;</string>
+					<key>url</key>
+					<string>%BASE_URL%%match%</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>URLDownloader</string>
+				<key>Arguments</key>
+				<dict>
+					<key>filename</key>
+					<string>%SOFTWARE_TITLE%.pkg</string>
+					<key>url</key>
+					<string>%BASE_URL%%download_url%</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>URLDownloader</string>
+				<key>Arguments</key>
+				<dict>
+					<key>filename</key>
+					<string>%SOFTWARE_TITLE%_Extension.dmg</string>
+					<key>url</key>
+					<string>%LOGIN_EXTENSION_URL%</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>FileFinder</string>
+				<key>Arguments</key>
+				<dict>
+					<key>pattern</key>
+					<string>%RECIPE_CACHE_DIR%/downloads/%SOFTWARE_TITLE%_Extension.dmg/*.pkg</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>CodeSignatureVerifier</string>
+				<key>Arguments</key>
+				<dict>
+					<key>expected_authority_names</key>
+					<array>
+						<string>Developer ID Installer: DisplayLink Corp (73YQY62QM3)</string>
+						<string>Developer ID Certification Authority</string>
+						<string>Apple Root CA</string>
+					</array>
+					<key>input_path</key>
+					<string>%RECIPE_CACHE_DIR%/downloads/%SOFTWARE_TITLE%.pkg</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>CodeSignatureVerifier</string>
+				<key>Arguments</key>
+				<dict>
+					<key>expected_authority_names</key>
+					<array>
+						<string>Developer ID Installer: DisplayLink Corp (73YQY62QM3)</string>
+						<string>Developer ID Certification Authority</string>
+						<string>Apple Root CA</string>
+					</array>
+					<key>input_path</key>
+					<string>%RECIPE_CACHE_DIR%/downloads/%SOFTWARE_TITLE%_Extension.dmg/%found_basename%</string>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+</plist>
