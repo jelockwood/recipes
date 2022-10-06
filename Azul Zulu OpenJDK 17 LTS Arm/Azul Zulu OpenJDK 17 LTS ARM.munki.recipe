@@ -10,7 +10,7 @@ Based on Azul Zulu OpenJDK 11 LTS recipes by dataJAR.
 		<key>Identifier</key>
 		<string>com.github.jelockwood.munki.ARM.AzulZuluOpenJDK17LTS</string>
 		<key>ParentRecipe</key>
-		<string>com.github.jelockwood.pkg.AzulZuluOpenJDK17LTS</string>
+		<string>com.github.jelockwood.pkg.ARM.AzulZuluOpenJDK17LTS</string>
 		<key>MinimumVersion</key>
 		<string>2.3.0</string>
 		<key>Input</key>
