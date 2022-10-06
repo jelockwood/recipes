@@ -19,7 +19,7 @@
                 <string>testing</string>
             </array>
             <key>category</key>
-            <string>Applications</string>
+            <string>Developer Tools</string>
             <key>description</key>
             <string>Azul Zulu builds of OpenJDK are open source, TCK-tested and certified builds of OpenJDK. Azul Zulu is available for a wide range of hardware platforms and operating systems.</string>
             <key>developer</key>
