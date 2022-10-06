@@ -63,17 +63,6 @@ Based on Azul Zulu OpenJDK 11 LTS recipes by dataJAR.
 		<array>
 			<dict>
 				<key>Processor</key>
-				<string>DeprecationWarning</string>
-				<key>Arguments</key>
-				<dict>
-					<key>warning_message</key>
-					<string>This processor is deprecated and will be removed from this repository by 2022/10/30.
-You may want to consider the more generic and flexible AzulZuluJava recipes I have written.
-</string>
-				</dict>
-			</dict>
-			<dict>
-				<key>Processor</key>
 				<string>FlatPkgUnpacker</string>
 				<key>Arguments</key>
 				<dict>
