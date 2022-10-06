@@ -11,7 +11,7 @@ Extensions: zip, tar.gz, dmg
 Bundle Types: jre, jdk, jre_fx, jdk_fx
 </string>
 		<key>Identifier</key>
-		<string>com.github.jelockwoo.download.ARM.AzulZuluOpenJDK17LTS</string>
+		<string>com.github.jelockwood.download.ARM.AzulZuluOpenJDK17LTS</string>
 		<key>MinimumVersion</key>
 		<string>2.3.0</string>
 		<key>Input</key>
