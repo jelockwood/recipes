@@ -37,7 +37,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.jelockwood.recipe.download.Keka</string>
+	<string>com.github.hansen-m.download.Keka</string>
 	<key>Process</key>
 	<array>
 		<dict>
