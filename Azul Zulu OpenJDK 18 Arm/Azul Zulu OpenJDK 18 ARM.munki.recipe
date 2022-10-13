@@ -99,7 +99,7 @@ Munki Architectures: x86_64, arm64
 				<key>Arguments</key>
 				<dict>
 					<key>re_pattern</key>
-					<string>.*install-location="([^"]*)"</string>
+					<string>.*install-location=&quot;([^&quot;]*)"</string>
 					<key>url</key>
 					<string>file://%RECIPE_CACHE_DIR%/unpack/zulu-%JAVA_MAJOR_VERSION%.pkg/PackageInfo</string>
 					<key>result_output_var_name</key>
