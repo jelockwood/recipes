@@ -101,7 +101,7 @@ Munki Architectures: x86_64, arm64
 					<key>re_pattern</key>
 					<string>.*install-location="([^"]*)"</string>
 					<key>url</key>
-					<string>file%3A%2F%2F%25RECIPE_CACHE_DIR%25%2Funpack%2Fzulu-%25JAVA_MAJOR_VERSION%25.pkg%2FPackageInfo</string>
+					<string>file%3A///RECIPE_CACHE_DIR%25%2Funpack%2Fzulu-%25JAVA_MAJOR_VERSION%25.pkg%2FPackageInfo</string>
 					<key>result_output_var_name</key>
 					<string>install_location</string>
 				</dict>
