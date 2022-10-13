@@ -11,7 +11,7 @@ Bundle Types: jre, jdk, jre_fx, jdk_fx
 Munki Architectures: x86_64, arm64
 </string>
 		<key>Identifier</key>
-		<string>com.jelockwood.recipe.munki.AzulZuluJava</string>
+		<string>com.jelockwood.recipe.munki.AzulZuluJava18</string>
 		<key>MinimumVersion</key>
 		<string>2.3.0</string>
 		<key>ParentRecipe</key>
