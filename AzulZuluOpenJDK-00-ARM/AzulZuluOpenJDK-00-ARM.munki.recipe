@@ -118,7 +118,7 @@ Munki Architectures: x86_64, arm64
 						<key>Library/Java</key>
 						<string>755</string>
 						<key>Library/Java/JavaVirtualMachines</key>
-						<integer>755</integer>
+						<string>755</string>
 					</dict>
 					<key>pkgroot</key>
 					<string>%RECIPE_CACHE_DIR%/%NAME%</string>
