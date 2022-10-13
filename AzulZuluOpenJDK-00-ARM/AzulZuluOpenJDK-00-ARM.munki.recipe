@@ -21,7 +21,7 @@ Munki Architectures: x86_64, arm64
 			<key>NAME</key>
 			<string>AzulZuluJava</string>
 			<key>JAVA_MAJOR_VERSION</key>
-			<integer>18</integer>
+			<string>18</string>
 			<key>ARCHITECTURE</key>
 			<string>arm</string>
 			<key>BUNDLE_TYPE</key>
