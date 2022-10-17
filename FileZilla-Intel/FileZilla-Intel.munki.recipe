@@ -30,6 +30,10 @@
 			<string>Utilities</string>
 			<key>display_name</key>
 			<string>FileZilla-Intel</string>
+			<key>supported_architectures</key>
+			<array>
+				<string>%SUPPORTED_ARCH%</string>
+			</array>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
