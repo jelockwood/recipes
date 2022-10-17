@@ -11,17 +11,17 @@ Bundle Types: jre, jdk, jre_fx, jdk_fx
 Munki Architectures: x86_64, arm64
 </string>
 		<key>Identifier</key>
-		<string>com.jelockwood.recipe.munki.AzulZuluJava00</string>
+		<string>com.jelockwood.recipe.munki.AzulZuluJava18-arm</string>
 		<key>MinimumVersion</key>
 		<string>2.3.0</string>
 		<key>ParentRecipe</key>
 		<string>com.github.davidbpirie.pkg.AzulZuluJava</string>
 		<key>Input</key>
 		<dict>
-			<key>NAME</key>
-			<string>AzulZuluJava</string>
 			<key>JAVA_MAJOR_VERSION</key>
 			<string>18</string>
+			<key>NAME</key>
+			<string>AzulZuluJava%JAVA_MAJOR_VERSION%</string>
 			<key>ARCHITECTURE</key>
 			<string>arm</string>
 			<key>BUNDLE_TYPE</key>
@@ -40,6 +40,8 @@ Munki Architectures: x86_64, arm64
 			<string>10.14.0</string>
 			<key>MUNKI_REPO_SUBDIR</key>
 			<string>%MUNKI_CATEGORY%/%MUNKI_DEVELOPER%/%NAME%/%ARCHITECTURE%</string>
+			<key>SUPPORTED_ARCH</key>
+			<string>%MUNKI_ARCHITECTURE%</string>
 			<key>pkginfo</key>
 			<dict>
 				<key>catalogs</key>
