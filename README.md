@@ -1,20 +1,18 @@
 # recipes
 Autopkg recipies
 
-These are my personal AutoPkg recipes.
+These are my personal [AutoPkg](https://github.com/autopkg/autopkg) recipes. If you find any of them not working for you then raise an issue above and I will dependent on having time available see if I can fix it.
 
-The Draw.io one replaces the currently broken one at - https://github.com/autopkg/peshay-recipes/tree/master/drawio it lacks a valid munki recipe.
+They are written in PLIST format so as to also be compatible with [AutoPkgr](https://github.com/lindegroup/autopkgr) the GUI frontend to AutoPkg. AutoPkgr does not currently accept YAML format recipes. For those unaware AutoPkg recipes operate in a chain with one recipe calling a parent recipe and that recipe in turn potentially calling another parent recipe. Therefore a typical chain might be as follows.
 
-The Rocket.Chat desktop client is a new one since there was no existing one I could find.
+Download recipe (called by) <- [Munki](https://www.munki.org/munki/) recipe (called by) <- Override recipe
 
-The Gifox one is for the GIF tool, there seems to only be a partial one of this for JSS, mine is a full one for Munki. 
+Note: I have found that even if you make your own override recipe in PLIST format you cannot via AutoPkgr add this to the list of overrides unless as per the above example there is a Munki recipe in PLIST format. However again using the above example you could have the Munki recipe in PLIST format and have that call a parent Download recipe in YAML format and AutoPkgr will work for this although it will show a warning symbol as it itself will not see the Download recipe as being available. Since AutoPkgr is at that point telling AutoPkg to run the Munki recipe and AutoPkg itself does support both PLIST and YAML then AutoPkg takes the info from the Munki recipe and AutoPkg successfully finds the Download recipe even if in YAML format.
 
-The libmacgpg-free one downloads a replacement library for GPGSuite and then wraps it in an installer package to restore 'free' functionality to the GPGSuite, you need to use the existing GPGSuite recipe to download that and then this recipe to download the replacement library/plugin.
+This is one of the reasons I still choose to write my recipes in PLIST format and why in one or two cases I have also written my own Munki recipies in PLIST format even though a recipe in YAML already existed for the same application.
 
-This Notion recipe replaces an existing one. The existing one scrapes a JSON file which has not been updated for a long time and hence it does not find current updates. My replacement uses an alternative method and finds the current version.
+Note: There is at least one [free online tool](https://wtools.io/convert-yaml-to-plist) to translate YAML to PLIST format or vice versa, it is not always 100% correct but I did find it helpful.
 
-NordVPN is a commercial VPN service, this is a new recipe to download the latest Mac client.
+I have also where needed provided versions of my recipes to download the separate Intel and Apple Silicon versions of installers for applications. This is where the author of those applications has regrettably failed to provide a universal binary version containing both. (BAD developers!)
 
-Smartmontools is a command line tool to query the SMART status of drives fitted to your Mac. Amongst other things this tool is used by MunkiReports.
-
-Pinpoint is a command line tool to obtain the location of a Mac. It uses GoogleAPIs to do this as Apple now block automated access to their 'location service'. It is used by MunkiReport for reporting location information. See - https://github.com/jelockwood/pinpoint
+In the case of my Azul Zulu recipies, I provide both versions written to download specific Java JDK versions and for both Intel and Apple Silicon since they are not universal binaries. (Not being universal binaries makes more sense in this case.) In theory you could use the Munki recipe the original Azul Zulu recipe author who wrote the Download recipe my Munki recipes call but he wrote them in YAML format and as I explained this means it does not work with AutoPkgr. Also in theory I could like him have written just a single Munki recipe which downloads just a specific single version of the JDK and then like him write multiple override recipes to 'override' which version to download. However then so would everyone else using my recipe. I have therefore created specific individual Munki recipes to make your life easier. I have chosen to create recipes for Azul Zulu JDK because there are more different versions available in both Intel and Apple Silicon versions than equivalent JDKs made available by other developers e.g. AWS, Microsoft and Adopt all offer fewer choices.
