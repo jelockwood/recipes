@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of Whisper Transcription from the Mac App Store and imports it into Munki.</string>
+	<key>Identifier</key>
+	<string>com.jelockwood.recipe.munki.WhisperTranscription</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>Whisper Transcription</string>
+		<key>PATH</key>
+		<string>/Volumes/G4_DP/Whisper Transcription.app</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>Applications</string>
+			<key>description</key>
+			<string> </string>
+			<key>developer</key>
+			<string></string>
+			<key>display_name</key>
+			<string>Whisper Transcription</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.nmcspadden.munki.appstore</string>
+	<key>Process</key>
+	<array/>
+</dict>
+</plist>
