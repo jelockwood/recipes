@@ -24,6 +24,8 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Developer Tools</string>
 			<key>description</key>
 			<string>Maintenance release to fix the issue of Apple removing python from macOS 12.3.
 
