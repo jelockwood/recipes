@@ -13,7 +13,7 @@
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Python</string>
+		<string>MunkiReport-Python2</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>blocking_applications</key>
@@ -25,11 +25,16 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string> </string>
+			<string>Maintenance release to fix the issue of Apple removing python from macOS 12.3.
+
+IMPORTANT CHANGES
+You will need to install MunkiReport-Python2 first on the client or MunkiReport will not run. There's a pre-built Python package available thanks to Per Olofsson: https://github.com/munkireport/MunkiReport-Python/releases/latest
+
+All core modules have been patched to use the new python install, custom or third party modules may need an update if they use python client scripts.</string>
 			<key>developer</key>
-			<string></string>
+			<string>MunkiReport</string>
 			<key>display_name</key>
-			<string>Python</string>
+			<string>MunkiReport-Python2</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
