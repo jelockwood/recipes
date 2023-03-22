@@ -14,8 +14,6 @@
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
 		<string>Whisper Transcription</string>
-		<key>PATH</key>
-		<string>/Volumes/G4_DP/Whisper Transcription.app</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
