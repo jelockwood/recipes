@@ -60,7 +60,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>github.rtrouton.download.citrixworkspaceuniversal</string>
+	<string>com.github.rtrouton.download.citrixworkspaceuniversal</string>
 	<key>Process</key>
 	<array>
 		<dict>
