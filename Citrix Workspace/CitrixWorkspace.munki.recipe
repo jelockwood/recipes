@@ -49,6 +49,8 @@
 			<string>The new Citrix Workspace app gives users a great experience—a secure, contextual, unified workspace—on any device. Give teams instant access to all their SaaS and web apps, files, mobile apps, Citrix Virtual Apps and Desktops from an easy-to-use, all-in-one interface powered by Citrix Workspace services.</string>
 			<key>developer</key>
 			<string>Citrix Systems, Inc.</string>
+			<key>category</key>
+			<string>Utilities</string>
 			<key>display_name</key>
 			<string>Citrix Workspace</string>
 			<key>name</key>
