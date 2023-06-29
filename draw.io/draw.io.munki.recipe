@@ -27,7 +27,7 @@
             <key>display_name</key>
             <string>%NAME%</string>
             <key>name</key>
-            <string>%NAME%_%PLATFORM_ARCH%</string>
+            <string>draw.io</string>
             <key>minimum_os_version</key>
             <string>10.7.0</string>
             <key>blocking_applications</key>
@@ -36,10 +36,6 @@
             </array>
             <key>unattended_install</key>
             <true/>
-            <key>supported_architectures</key>
-            <array>
-                <string>%SUPPORTED_ARCH%</string>
-            </array>
         </dict>
     </dict>
     <key>MinimumVersion</key>
