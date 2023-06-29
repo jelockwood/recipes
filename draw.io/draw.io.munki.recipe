@@ -21,7 +21,7 @@
 	    <key>description</key>
 	    <string>Official electron build of draw.io</string>
             <key>category</key>
-            <string>Productivity</string>
+            <string>Applications</string>
 	    <key>developer</key>
 	    <string>JGraph Ltd</string>
             <key>display_name</key>
