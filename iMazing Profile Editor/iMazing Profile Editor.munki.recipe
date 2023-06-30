@@ -21,7 +21,12 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string> </string>
+			<string> Create, Edit, and Sign Apple Configuration Profiles
+
+A free app to easily define settings that are ready to be deployed locally or via MDM to fleets of iPhones, iPads, Macs, and other Apple devices.
+</string>
+			<key>category</key>
+			<string>Utilities</string>
 			<key>developer</key>
 			<string>DigiDNA SARL</string>
 			<key>display_name</key>
