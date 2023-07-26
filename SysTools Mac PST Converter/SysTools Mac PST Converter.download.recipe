@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Packages disk image.</string>
+	<string>Downloads the latest SysTools Mac PST Converter disk image.</string>
 	<key>Identifier</key>
 	<string>io.github.hjuutilainen.download.Packages</string>
 	<key>Input</key>
@@ -38,7 +38,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
-				<string>%pathname%/packages/Packages.pkg</string>
+				<string>%pathname%/SysTools Mac PST Converter/SysTools Mac PST Converter.pkg</string>
 				<key>expected_authority_names</key>
 				<array>
 					<string>Developer ID Installer: Stephane Sudre (NL5M9E394P)</string>
