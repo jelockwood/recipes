@@ -56,18 +56,7 @@
 				<string>%pathname%/*.pkg</string>
 			</dict>
 			<key>Processor</key>
-			<string>FlatPkgUnpacker</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload</string>
-				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/fred.pkg/Payload</string>
-			</dict>
-			<key>Processor</key>
-			<string>PkgPayloadUnpacker</string>
+			<string>PkgUnpacker</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
