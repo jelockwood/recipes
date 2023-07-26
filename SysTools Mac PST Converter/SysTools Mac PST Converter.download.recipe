@@ -86,5 +86,6 @@
 			<key>Processor</key>
 			<string>Versioner</string>
 		</dict>
+	</dict>
 </dict>
 </plist>
