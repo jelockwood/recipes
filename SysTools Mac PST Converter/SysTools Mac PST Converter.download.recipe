@@ -54,8 +54,6 @@
 				<string>%RECIPE_CACHE_DIR%/unpack</string>
 				<key>flat_pkg_path</key>
 				<string>%pathname%/*.pkg</string>
-				<key>purge_destination</key>
-				<true/>
 			</dict>
 			<key>Processor</key>
 			<string>FlatPkgUnpacker</string>
@@ -66,9 +64,7 @@
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload</string>
 				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/SysTools Mac PST Converter.pkg/Payload</string>
-				<key>purge_destination</key>
-				<true/>
+				<string>%RECIPE_CACHE_DIR%/unpack/*.pkg/Payload</string>
 			</dict>
 			<key>Processor</key>
 			<string>PkgPayloadUnpacker</string>
