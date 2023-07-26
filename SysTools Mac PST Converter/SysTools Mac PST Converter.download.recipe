@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest SysTools Mac PST Converter disk image.</string>
 	<key>Identifier</key>
-	<string>io.github.hjuutilainen.download.Packages</string>
+	<string>com.github.jelockwood.recipes.download.SysToolsMacPSTConverter</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
