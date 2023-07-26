@@ -15,7 +15,7 @@ Set the DERIVE_MIN_OS variable to a non-empty string to set the minimum_os_versi
 		<key>NAME</key>
 		<string>SysTools Mac PST Converter</string>
 		<key>MUNKIIMPORT_PKG_NAME</key>
-		<string>%pathname%/SysTools Mac PST Converter.pkg</string>
+		<string>SysTools Mac PST Converter/SysTools Mac PST Converter.pkg</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/SysTools Mac PST Converter</string>
 		<key>MUNKI_CATEGORY</key>
