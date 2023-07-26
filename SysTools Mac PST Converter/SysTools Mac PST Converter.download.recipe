@@ -42,7 +42,7 @@
 					<string>Apple Root CA</string>
 				</array>
 				<key>input_path</key>
-				<string>%pathname%/SysTools Mac PST Converter v([\d+][\D][\d+]).pkg</string>
+				<string>%pathname%/SysTools Mac PST Converter v*.pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
