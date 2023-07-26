@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest SysTools Mac PST Converter disk image.</string>
+	<string>Downloads the latest Packages disk image.</string>
 	<key>Identifier</key>
-	<string>com.github.jelockwood.recipes.download.SysToolsMacPSTConverter</string>
+	<string>io.github.hjuutilainen.download.Packages</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Packages</string>
 		<key>DOWNLOAD_URL</key>
-		<string>https://downloads.systoolsgroup.com/mac-pst-converter.dmg</string>
+		<string>http://s.sudre.free.fr/Software/files/Packages.dmg</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.3.1</string>
