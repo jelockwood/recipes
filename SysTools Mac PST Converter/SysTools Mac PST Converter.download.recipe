@@ -41,10 +41,8 @@
 					<string>Developer ID Certification Authority</string>
 					<string>Apple Root CA</string>
 				</array>
-				<key>pkg_version</key>
-				<string>%pathname%/SysTools Mac PST Converter v(\d\.\d).pkg</string>
 				<key>input_path</key>
-				<string>%pathname%/SysTools Mac PST Converter v2.8.pkg</string>
+				<string>%pathname%/SysTools Mac PST Converter v8.2.pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
@@ -55,7 +53,7 @@
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack</string>
 				<key>flat_pkg_path</key>
-				<string>%pathname%/SysTools Mac PST Converter v2.8.pkg</string>
+				<string>%pathname%/SysTools Mac PST Converter v8.2.pkg</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
@@ -68,7 +66,7 @@
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload</string>
 				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/SysTools_Mac_PST_Converter_v2.8/Payload</string>
+				<string>%RECIPE_CACHE_DIR%/unpack/SysTools_Mac_PST_Converter_v8.2.pkg/Payload</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
