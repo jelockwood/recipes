@@ -9,9 +9,9 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Packages</string>
+		<string>SysTools Mac PST Converter</string>
 		<key>DOWNLOAD_URL</key>
-		<string>http://s.sudre.free.fr/Software/files/Packages.dmg</string>
+		<string>https://downloads.systoolsgroup.com/mac-pst-converter.dmg</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.3.1</string>
