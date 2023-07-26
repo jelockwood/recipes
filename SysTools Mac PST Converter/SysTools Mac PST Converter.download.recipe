@@ -42,9 +42,9 @@
 					<string>Apple Root CA</string>
 				</array>
 				<key>pkg_version</key>
-				<string>%pathname%/SysTools Mac PST Converter v[\d][\.][\d].pkg</string>
+				<string>%pathname%/SysTools Mac PST Converter v(\d+\D\d+).pkg</string>
 				<key>input_path</key>
-				<string>%pathname%/SysTools Mac PST Converter v*.pkg</string>
+				<string>%pathname%/SysTools Mac PST Converter v(\d+\D\d+).pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
