@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of SysTools Mac PST Converter.</string>
+	<string>Downloads the latest SysTools Mac PST Converter disk image.</string>
 	<key>Identifier</key>
 	<string>com.github.jelockwood.recipes.download.SysToolsMacPSTConverter</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>SysTools Mac PST Converter</string>
+		<string>Packages</string>
 		<key>DOWNLOAD_URL</key>
 		<string>https://downloads.systoolsgroup.com/mac-pst-converter.dmg</string>
 	</dict>
@@ -36,16 +36,15 @@
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
 			<key>Arguments</key>
-			<key>Arguments</key>
 			<dict>
+				<key>input_path</key>
+				<string>%pathname%/packages/Packages.pkg</string>
 				<key>expected_authority_names</key>
 				<array>
-					<string>Developer ID Installer: SysTools Software Private Limited (E892Z6G43Y)</string>
+					<string>Developer ID Installer: Stephane Sudre (NL5M9E394P)</string>
 					<string>Developer ID Certification Authority</string>
 					<string>Apple Root CA</string>
 				</array>
-				<key>input_path</key>
-				<string>%pathname%/SysTools Mac PST Converter.pkg</string>
 			</dict>
 		</dict>
 	</array>
