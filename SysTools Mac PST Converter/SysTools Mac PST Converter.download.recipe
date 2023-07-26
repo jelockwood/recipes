@@ -50,12 +50,13 @@
 			<string>CodeSignatureVerifier</string>
 		</dict>
 		<dict>
-		<key>Processor</key>
-		<string>EndOfCheckPhase</string>
-		<key>Arguments</key>
-		<dict>
-			<key>version</key>
-			<string>%pkg_version%</string>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+			<key>Arguments</key>
+			<dict>
+				<key>version</key>
+				<string>%pkg_version%</string>
+			</dict>
 		</dict>
 	</array>
 </dict>
