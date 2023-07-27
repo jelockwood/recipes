@@ -22,45 +22,30 @@
 			<string>PkgCopier</string>
 			<key>Arguments</key>
 			<dict>
-				<key>pkg_version</key>
-				<string>%pathname%/*v(\d\D\d).pkg</string>
 				<key>source_pkg</key>
 				<string>%pathname%/*.pkg</string>
 				<key>pkg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME% v%pkg_version%.pkg</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%.pkg</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>destination_path</key>
+				<key>extract_root</key>
 				<string>%RECIPE_CACHE_DIR%/unpack</string>
-				<key>flat_pkg_path</key>
+				<key>pkg_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%.pkg</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
 			<key>Processor</key>
-			<string>FlatPkgUnpacker</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload</string>
-				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/%NAME%.pkg/Payload</string>
-				<key>purge_destination</key>
-				<true/>
-			</dict>
-			<key>Processor</key>
-			<string>PkgPayloadUnpacker</string>
+			<string>PkgExtractor</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload/%NAME%.app/Contents/Info.plist</string>
+				<string>%RECIPE_CACHE_DIR%/unload/%NAME%.app/Contents/Info.plist</string>
 				<key>plist_version_key</key>
 				<string>CFBundleShortVersionString</string>
 			</dict>
