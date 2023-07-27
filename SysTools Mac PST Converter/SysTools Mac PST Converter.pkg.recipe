@@ -23,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_version</key>
-				<string>%pathname%/*v([\d][\.][\d]).pkg</string>
+				<string>%pathname%/*v(\d\D\d).pkg</string>
 				<key>source_pkg</key>
 				<string>%pathname%/*.pkg</string>
 				<key>pkg_path</key>
