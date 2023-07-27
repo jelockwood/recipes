@@ -14,7 +14,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>ccom.github.jelockwood.recipes.download.SysToolsMacPSTConverter</string>
+	<string>com.github.jelockwood.recipes.download.SysToolsMacPSTConverter</string>
 	<key>Process</key>
 	<array>
 		<dict>
