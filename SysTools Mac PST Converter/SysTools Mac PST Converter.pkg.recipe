@@ -73,7 +73,6 @@
 			</dict>
 			<key>Processor</key>
 			<string>Versioner</string>
-		</dict>
 			<key>Arguments</key>
 			<dict>
 				<key>path_list</key>
@@ -85,6 +84,7 @@
 			</dict>
 			<key>Processor</key>
 			<string>PathDeleter</string>
+		</dict>
 	</array>
 </dict>
 </plist>
