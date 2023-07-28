@@ -73,6 +73,8 @@
 			</dict>
 			<key>Processor</key>
 			<string>Versioner</string>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>path_list</key>
