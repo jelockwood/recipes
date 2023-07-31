@@ -25,7 +25,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string>"(\/\/cdn\.document360\.io\/.*-.*-.*-.*\/Images\/Documentation\/Jamf%20Compliance%20Editor%20v.*\.*\.*\.*\.*tar\.gz\?sv=\d{4}-\d{2}-\d{2}&sig=.*&spr=https.*http&st=\d{4}-\d{2}-\d{2}.*se=\d{4}-\d{2}-\d{2}.*&srt=.*&sp=.)"</string>
+				<string>(\/\/cdn\.document360\.io\/.*\/Images\/Documentation\/Jamf%20Compliance%20Editor%20v.*tar\.gz.*sp=r)</string>
 				<key>url</key>
 				<string>https://trusted.jamf.com/docs/establishing-compliance-baselines</string>
 			</dict>
@@ -36,7 +36,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>%match%</string>
+				<string>https:%match%</string>
 			</dict>
 		</dict>
 		<dict>
