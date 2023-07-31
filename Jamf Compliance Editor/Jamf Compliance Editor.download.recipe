@@ -24,13 +24,6 @@
 			<string>URLTextSearcher</string>
 			<key>Arguments</key>
 			<dict>
-				<key>curl_opts</key>
-				<array>
-					<string>--request</string>
-					<string>POST</string>
-					<string>--data</string>
-					<string>download=Download%20Now&amp;DMdownloadVersion=mac_dmg</string>
-				</array>
 				<key>re_pattern</key>
 				<string>href="(https:\/\/cdn\.document360\.io\/.*-.*-.*-.*\/Images\/Documentation\/Jamf%20Compliance%20Editor%20v.*\.*\.*\.*\.*tar\.gz\?sv=\d{4}-\d{2}-\d{2}&sig=.*&spr=https.*http&st=\d{4}-\d{2}-\d{2}.*se=\d{4}-\d{2}-\d{2}.*&srt=.*&sp=.)"</string>
 				<key>url</key>
