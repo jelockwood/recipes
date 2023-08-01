@@ -66,6 +66,8 @@
 			<dict>
 				<key>url</key>
 				<string>%output_string%</string>
+				<key>filename</key>
+				<string>%filename%</string>
 			</dict>
 		</dict>
 		<dict>
