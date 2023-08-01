@@ -44,6 +44,19 @@
    			<string>com.github.jelockwood.recipes.StringReplacer/StringReplacer</string>
 		</dict>
 		<dict>
+    			<key>Arguments</key>
+    			<dict>
+        			<key>string_to_replace</key>
+        			<string>//cdn.document360.io</string>
+        			<key>input_string</key>
+        			<string>%match%</string>
+        			<key>replacement_string</key>
+        			<string>https://cdn.document360.io</string>
+    			</dict>
+    			<key>Processor</key>
+   			<string>com.github.jelockwood.recipes.StringReplacer/StringReplacer</string>
+		</dict>
+		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 			<key>Arguments</key>
