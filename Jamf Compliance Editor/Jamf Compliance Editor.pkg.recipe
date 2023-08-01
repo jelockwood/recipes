@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Description</key>
+		<string>Downloads the latest version of Jamf Compliance Editor and creates a package.</string>
+		<key>Identifier</key>
+		<string>com.github.jelockwood.recipes.pkg.JamfComplianceEditor</string>
+		<key>ParentRecipe</key>
+		<string>com.github.jelockwood.recipes.download.JamfComplianceEditor</string>
+		<key>MinimumVersion</key>
+		<real>2.3</real>
+		<key>Input</key>
+		<dict>
+			<key>NAME</key>
+			<string>Jamf Compliance Editor</string>
+		</dict>
+		<key>Process</key>
+		<array>
+			<dict>
+				<key>Processor</key>
+				<string>AppPkgCreator</string>
+				<key>Arguments</key>
+				<dict>
+					<key>app_path</key>
+					<string>%RECIPE_CACHE_DIR%/unzip/Jamf Compliance Editor.app</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+					<key>path_list</key>
+					<array>
+						<string>%RECIPE_CACHE_DIR%/unzip</string>
+					</array>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+</plist>
