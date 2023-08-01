@@ -61,29 +61,28 @@
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
 		</dict>
+		<dict>
+			<key>Arguments</key>
 			<dict>
-				<key>Arguments</key>
-				<dict>
-					<key>archive_path</key>
-					<string>%pathname%</string>
-					<key>destination_path</key>
-					<string>%RECIPE_CACHE_DIR%/unzip</string>
-					<key>purge_destination</key>
-					<true/>
-				</dict>
-				<key>Processor</key>
-				<string>Unarchiver</string>
+				<key>archive_path</key>
+				<string>%pathname%</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/unzip</string>
+				<key>purge_destination</key>
+				<true/>
 			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+			<key>Arguments</key>
 			<dict>
-				<key>Processor</key>
-				<string>CodeSignatureVerifier</string>
-				<key>Arguments</key>
-				<dict>
-					<key>requirement</key>
-					<string>anchor apple generic and identifier "com.jamf.complianceeditor" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "483DWKW443")</string>
-					<key>input_path</key>
-					<string>%RECIPE_CACHE_DIR%/unzip/Jamf Compliance Editor.app</string>
-				</dict>
+				<key>requirement</key>
+				<string>anchor apple generic and identifier "com.jamf.complianceeditor" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "483DWKW443")</string>
+				<key>input_path</key>
+				<string>%RECIPE_CACHE_DIR%/unzip/Jamf Compliance Editor.app</string>
 			</dict>
 		</dict>
 	</array>
