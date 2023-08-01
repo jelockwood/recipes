@@ -49,7 +49,7 @@
         			<key>string_to_replace</key>
         			<string>//cdn.document360.io</string>
         			<key>input_string</key>
-        			<string>%match%</string>
+        			<string>%output_string%</string>
         			<key>replacement_string</key>
         			<string>https://cdn.document360.io</string>
     			</dict>
