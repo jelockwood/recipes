@@ -20,8 +20,12 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Utiltiies</string>
 			<key>description</key>
-			<string> </string>
+			<string>Jamf Compliance Editor is a tool that provides macOS system administrators with an easy way to establish and manage compliance baselines on their fleet of macOS devices.
+
+This tool is built on the foundations of the macOS Security Compliance Project, hosted by the United States government agency, NIST, in their Github repo.</string>
 			<key>developer</key>
 			<string>JAMF Software</string>
 			<key>display_name</key>
@@ -35,16 +39,16 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jelockwood.recipes.download.JamfComplianceEditor</string>
+	<string>com.github.grahampugh.recipes.download.JamfComplianceEditor</string>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>dmg_root</key>
+				<string>%RECIPE_CACHE_DIR%/unpack</string>
 				<key>dmg_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
-				<key>dmg_root</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 			</dict>
 			<key>Processor</key>
 			<string>DmgCreator</string>
