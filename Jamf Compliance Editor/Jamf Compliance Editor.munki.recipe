@@ -35,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.grahampugh.recipes.pkg.JamfComplianceEditor</string>
+	<string>com.github.grahampugh.recipes.download.JamfComplianceEditor</string>
 	<key>Process</key>
 	<array>
 		<dict>
