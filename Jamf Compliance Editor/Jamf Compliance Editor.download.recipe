@@ -85,7 +85,7 @@
 					<string>%RECIPE_CACHE_DIR%/unzip/Jamf Compliance Editor.app</string>
 				</dict>
 			</dict>
-		</array>
+		</dict>
 	</array>
 </dict>
 </plist>
