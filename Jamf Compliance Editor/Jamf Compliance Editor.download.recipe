@@ -33,15 +33,15 @@
 		<dict>
     			<key>Arguments</key>
     			<dict>
-        			<key>find</key>
+        			<key>string_to_replace</key>
         			<string>&amp;amp;</string>
         			<key>input_string</key>
         			<string>%match%</string>
-        			<key>replace</key>
+        			<key>replacement_string</key>
         			<string>&</string>
     			</dict>
     			<key>Processor</key>
-   			<string>com.github.homebysix.FindAndReplace/FindAndReplace</string>
+   			<string>com.github.grahampugh.recipes.commonprocessors/StringReplacer</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
