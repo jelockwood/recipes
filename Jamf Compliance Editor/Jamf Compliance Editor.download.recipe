@@ -38,7 +38,7 @@
         			<key>input_string</key>
         			<string>%match%</string>
         			<key>replace</key>
-        			<string>&amp;</string>
+        			<string>&</string>
     			</dict>
     			<key>Processor</key>
    			<string>com.github.homebysix.FindAndReplace/FindAndReplace</string>
