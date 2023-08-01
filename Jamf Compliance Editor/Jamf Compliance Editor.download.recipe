@@ -31,6 +31,19 @@
 			</dict>
 		</dict>
 		<dict>
+    			<key>Arguments</key>
+    			<dict>
+        			<key>find</key>
+        			<string>&amp;amp;</string>
+        			<key>input_string</key>
+        			<string>%re_pattern%</string>
+        			<key>replace</key>
+        			<string>&amp;</string>
+    			</dict>
+    			<key>Processor</key>
+   			<string>com.github.homebysix.FindAndReplace/FindAndReplace</string>
+		</dict>
+		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 			<key>Arguments</key>
