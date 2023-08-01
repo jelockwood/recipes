@@ -47,25 +47,12 @@
    			<string>com.github.jelockwood.recipes.StringReplacer/StringReplacer</string>
 		</dict>
 		<dict>
-    			<key>Arguments</key>
-    			<dict>
-        			<key>string_to_replace</key>
-        			<string>//cdn.document360.io</string>
-        			<key>input_string</key>
-        			<string>%output_string%</string>
-        			<key>replacement_string</key>
-        			<string>https://cdn.document360.io</string>
-    			</dict>
-    			<key>Processor</key>
-   			<string>com.github.jelockwood.recipes.StringReplacer/StringReplacer</string>
-		</dict>
-		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>%output_string%</string>
+				<string>https:%output_string%</string>
 				<key>filename</key>
 				<string>%filename%</string>
 			</dict>
@@ -74,6 +61,31 @@
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
 		</dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>archive_path</key>
+					<string>%pathname%</string>
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR%/unzip</string>
+					<key>purge_destination</key>
+					<true/>
+				</dict>
+				<key>Processor</key>
+				<string>Unarchiver</string>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>CodeSignatureVerifier</string>
+				<key>Arguments</key>
+				<dict>
+					<key>requirement</key>
+					<string>anchor apple generic and identifier "com.jamf.complianceeditor" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "483DWKW443")</string>
+					<key>input_path</key>
+					<string>%RECIPE_CACHE_DIR%/unzip/Jamf Compliance Editor.app</string>
+				</dict>
+			</dict>
+		</array>
 	</array>
 </dict>
 </plist>
