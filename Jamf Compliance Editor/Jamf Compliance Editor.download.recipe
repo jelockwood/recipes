@@ -41,7 +41,7 @@
         			<string>&amp;</string>
     			</dict>
     			<key>Processor</key>
-   			<string>com.github.jelockwood.recipes.StringReplacer</string>
+   			<string>com.github.jelockwood.recipes.StringReplacer/StringReplacer</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
