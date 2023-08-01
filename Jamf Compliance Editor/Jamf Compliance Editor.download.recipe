@@ -8,13 +8,13 @@
 	<string>Downloads the latest version of Jamf Compliance Editor.</string>
 	<key>Identifier</key>
 	<string>com.github.jelockwood.recipes.download.JamfComplianceEditor</string>
+	<key>MinimumVersion</key>
+	<real>2.3</real>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Jamf Compliance Editor</string>
-        </dict>
-        <key>MinimumVersion</key>
-        <string>0.2.0</string>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -34,17 +34,17 @@
 			</dict>
 		</dict>
 		<dict>
-    			<key>Arguments</key>
-    			<dict>
-        			<key>string_to_replace</key>
-        			<string>&amp;amp;</string>
-        			<key>input_string</key>
-        			<string>%match%</string>
-        			<key>replacement_string</key>
-        			<string>&amp;</string>
-    			</dict>
-    			<key>Processor</key>
-   			<string>com.github.jelockwood.recipes.StringReplacer/StringReplacer</string>
+			<key>Processor</key>
+			<string>com.github.grahampugh.recipes.commonprocessors/StringReplacer</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_string</key>
+				<string>%url%</string>
+				<key>string_to_replace</key>
+				<string>&amp;amp;</string>
+				<key>replacement_string</key>
+				<string>&amp;</string>
+			</dict>
 		</dict>
 		<dict>
 			<key>Processor</key>
