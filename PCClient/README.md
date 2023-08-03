@@ -3,7 +3,7 @@ PCClient
 
 A set of AutoPkg recipes to download the Mac PaperCut Client from a PaperCut MF server.
 
-The PaperCut MF server installer when installed automatically generates a matching set of clients for Mac, Windows and Linux. This is stored in a sub-directory of the PaperCut server and the Mac client is merely a standard Mac app and not a pkg, dmg or zip.
+The PaperCut MF server installer when installed automatically generates a matching set of clients for Mac, Windows and Linux. This is stored in a sub-directory of the PaperCut server and the Mac client is merely a standard Mac app and not a pkg, dmg or zip. As the Mac client is effectively a directory with subfolders on the PaperCut server it cannot be downloaded using the standard URLDownload processor as this uses CURL which does not support recursive downloads.
 
 I have set the server to share the subdirectory via a web server and also set the server to run an automated task to make a zip file of the Mac client. The download recipe therefore downloads this zip file.
 
