@@ -121,21 +121,8 @@ if [[ -e "$install_dir/PCClient.app" ]]; then
 		${LOGGER} "Installing PaperCut Client"
 		/bin/cp -p -R "$install_dir/PCClient.app" /Applications/
 		${LOGGER} "Installing LaunchAgent"
-		cat <<< '
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-      <key>Label</key>
-      <string>com.papercut.client.agent</string>
-      <key>ProgramArguments</key>
-      <array>
-          <string>/Applications/PCClient.app/Contents/MacOS/JavaAppLauncher</string>
-      </array>
-      <key>KeepAlive</key>
-      <true/>
-</dict>
-</plist>' > "/Library/LaunchAgents/com.papercut.client.plist" 
+
+
 		/bin/cp -p "$install_dir/papercut-start.sh" /usr/local/munki/
 		# /bin/rm -f "$install_dir/com.papercut.client.plist"
 		/usr/sbin/chown root:wheel /Library/LaunchAgents/com.papercut.client.plist
