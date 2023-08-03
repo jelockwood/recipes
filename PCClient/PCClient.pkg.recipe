@@ -6,6 +6,11 @@
 	<string>Packages the latest version of PCClient.</string>
 	<key>Identifier</key>
 	<string>com.github.jelockwood.recipes.pkg.PCClient</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>PCClient</string>
+	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
