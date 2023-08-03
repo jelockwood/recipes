@@ -27,7 +27,7 @@
 			<key>developer</key>
 			<string>PaperCut</string>
 			<key>display_name</key>
-			<string>PCClient</string>
+			<string>PaperCut Client</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
