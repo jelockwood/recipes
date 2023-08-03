@@ -121,6 +121,7 @@ if [[ -e "$install_dir/PCClient.app" ]]; then
 		${LOGGER} "Installing PaperCut Client"
 		/bin/cp -p -R "$install_dir/PCClient.app" /Applications/
 		${LOGGER} "Installing LaunchAgent"
+		cd /Library/LaunchAgents
 
 		/bin/cp -p "$install_dir/papercut-start.sh" /usr/local/munki/
 		# /bin/rm -f "$install_dir/com.papercut.client.plist"
