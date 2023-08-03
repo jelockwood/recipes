@@ -18,7 +18,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>pattern</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/PCClient.app</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/*.app</string>
 			</dict>
 		</dict>
 	</array>
