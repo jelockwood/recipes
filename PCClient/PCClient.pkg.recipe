@@ -13,13 +13,13 @@
 	<key>Process</key>
 	<array>
 	        <dict>
-	            <key>Processor</key>
-	            <string>FileFinder</string>
-	            <key>Arguments</key>
-	            <dict>
-			<key>pattern</key>
-                	<string>%RECIPE_CACHE_DIR%/%NAME%/PCClient.app</string>
-		    </dict>
+			<key>Processor</key>
+			<string>FileFinder</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pattern</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/PCClient.app</string>
+			</dict>
                 </dict>
 		<dict>
 			<key>Processor</key>
@@ -94,6 +94,7 @@ sudo killall JavaAppLauncher
 
 exit 0		## Success
 exit 1		## Failure
+			</dict>
 		</dict>
 		<dict>
 			<key>Processor</key>
