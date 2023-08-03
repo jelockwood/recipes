@@ -83,6 +83,94 @@
 				<string>xx</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>FileCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>file_path</key>
+				<string>%RECIPE_CACHE_DIR%/Scripts/preinstall</string>
+				<key>file_mode</key>
+				<string>0755</string>
+				<key>file_content</key>
+				<string>#!/bin/sh
+## preinstall
+
+pathToScript=$0
+pathToPackage=$1
+targetLocation=$2
+targetVolume=$3
+
+
+sudo rm -R /Applications/PCClient.app/
+sudo killall JavaAppLauncher
+
+exit 0		## Success
+exit 1		## Failure
+				</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>FileCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>file_path</key>
+				<string>%RECIPE_CACHE_DIR%/Scripts/postinstall</string>
+				<key>file_mode</key>
+				<string>0755</string>
+				<key>file_content</key>
+				<string>#!/bin/sh
+# Install PaperCut client launchagent
+LOGGER="/usr/bin/logger"
+
+# Determine working directory
+install_dir=`dirname $0`
+	
+	
+# Install PaperCut Client and launchagent
+	
+if [[ -e "$install_dir/PCClient.app" ]]; then
+		${LOGGER} "Installing PaperCut Client"
+		/bin/cp -p -R "$install_dir/PCClient.app" /Applications/
+		/bin/cp -p "$install_dir/com.papercut.client.plist" /Library/LaunchAgents/
+		/bin/cp -p "$install_dir/papercut-start.sh" /usr/local/munki/
+		# /bin/rm -f "$install_dir/com.papercut.client.plist"
+		/usr/sbin/chown root:wheel /Library/LaunchAgents/com.papercut.client.plist
+		/usr/bin/chmod 644 /Library/LaunchAgents/com.papercut.client.plist
+		/usr/sbin/chown root:wheel /usr/local/munki/papercut-start.sh
+		/usr/bin/chmod 644 /usr/local/munki/papercut-start.sh
+		/bin/launchctl load /Library/LaunchAgents/com.papercut.client.plist
+else
+		${LOGGER} "Could not find file"
+fi
+
+exit
+				</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>PkgCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_request</key>
+				<dict>
+					<key>pkgroot</key>
+					<string>%RECIPE_CACHE_DIR%/pkgroot</string>
+					<key>pkgname</key>
+					<string>%NAME%_%version%</string>
+					<key>pkgtype</key>
+					<string>flat</string>
+					<key>id</key>
+					<string>com.jelockwood.papercut.pkg</string>
+					<key>version</key>
+					<string>%version%</string>
+					<key>scripts</key>
+					<string>Scripts</string>
+				</dict>
+			</dict>
+		</dict>
 	</array>
 </dict>
 </plist>
