@@ -20,7 +20,7 @@ The munki recipe then uploads the installer pkg to a Munki repo.
 
 (Your own) override recipe
 ------------
-I am planning to modify the download recipe so that the URL and zip file name will be provided by an AutoPkg override recipe.
+I am planning to modify the download recipe so that the URL and zip file name will be provided by an AutoPkg override recipe. I am also hoping to allow the override recipe to define the PaperCut server address to use to automatically modify the paper.properties file inside the Mac PCClient.app before the installer pkg is created. Yes, the PaperCut server is supposed to set this automatically but this gives more control if needed.
 
 2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
 look like:
