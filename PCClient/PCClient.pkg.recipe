@@ -40,9 +40,7 @@
 				<key>pkgroot</key>
 				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
 				<key>pkgdirs</key>
-				<dict>
-					<string>%RECIPE_CACHE_DIR%/Scripts</string>
-				</dict>
+				<dict/>
 			</dict>
 		</dict>
 		<dict>
@@ -55,8 +53,7 @@
 				<key>file_mode</key>
 				<string>0755</string>
 				<key>file_content</key>
-				<string>
-				</string>
+				<string>xx</string>
 			</dict>
 		</dict>
 		<dict>
