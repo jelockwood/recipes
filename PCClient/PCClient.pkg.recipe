@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NAME</key>
+	<string>PCClient</string>
 	<key>Description</key>
 	<string>Packages the latest version of PCClient.</string>
 	<key>Identifier</key>
