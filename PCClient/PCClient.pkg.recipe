@@ -49,6 +49,20 @@
 			<key>Arguments</key>
 			<dict>
 				<key>file_path</key>
+				<string>%RECIPE_CACHE_DIR%/Scripts/com.papercut.client.agent</string>
+				<key>file_mode</key>
+				<string>0755</string>
+				<key>file_content</key>
+				<string>
+				</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>FileCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>file_path</key>
 				<string>%RECIPE_CACHE_DIR%/Scripts/preinstall</string>
 				<key>file_mode</key>
 				<string>0755</string>
