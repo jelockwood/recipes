@@ -1,7 +1,17 @@
-An h1 header
+PCClient
 ============
 
-Paragraphs are separated by a blank line.
+A set of AutoPkg recipes to download the Mac PaperCut Client from a PaperCut MF server.
+
+The PaperCut MF server installer when installed automatically generates a matching set of clients for Mac, Windows and Linux. This is stored in a sub-directory of the PaperCut server and the Mac client is merely a standard Mac app and not a pkg, dmg or zip.
+
+I have set the server to share the subdirectory via a web server and also set the server to run an automated task to make a zip file of the Mac client. The download recipe therefore downloads this zip file.
+
+The pkg recipe unarchives the zip file, it also creates preinstall and postinstall scripts a launchdaemon plist and then builds an installer pkg.
+
+The munki recipe then uploads the installer pkg to a Munki repo.
+
+I am planning to modify the download recipe so that the URL and zip file name will be provided by an AutoPkg override recipe.
 
 2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
 look like:
