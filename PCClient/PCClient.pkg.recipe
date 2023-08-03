@@ -88,70 +88,97 @@
 			<key>Arguments</key>
 			<dict>
 				<key>file_path</key>
+				<string>%RECIPE_CACHE_DIR%/Scripts/com.papercut.client.agent</string>
+				<key>file_mode</key>
+				<string>0755</string>
+				<key>file_content</key>
+				<string><?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+  <plist version="1.0">
+  <dict>
+      <key>Label</key>
+      <string>com.papercut.client.agent</string>
+      <key>ProgramArguments</key>
+      <array>
+          <string>/Applications/PCClient.app/Contents/MacOS/JavaAppLauncher</string>
+      </array>
+      <key>KeepAlive</key>
+      <true/>
+  </dict>
+  </plist>
+				</string>
+		<dict>
+			<key>Processor</key>
+			<string>FileCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>file_path</key>
+				<string>%RECIPE_CACHE_DIR%/Scripts/preinstall</string>
+				<key>file_mode</key>
+				<string>0755</string>
+				<key>file_content</key>
+				<string>#!/bin/sh
+## preinstall
+
+pathToScript=$0
+pathToPackage=$1
+targetLocation=$2
+targetVolume=$3
+
+
+sudo rm -R /Applications/PCClient.app/
+sudo killall JavaAppLauncher
+
+exit 0		## Success
+exit 1		## Failure
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>FileCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>file_path</key>
 				<string>%RECIPE_CACHE_DIR%/Scripts/postinstall</string>
 				<key>file_mode</key>
 				<string>0755</string>
 				<key>file_content</key>
-				<string>#!/bin/bash
+				<string>#!/bin/sh
+# Install PaperCut client launchagent
+LOGGER="/usr/bin/logger"
 
 # Determine working directory
-install_dir=$(dirname $0)
-
-option_1="%CLOUDNAME%"
-option_2="%DEVICETOKEN%"
-option_3="%HIDEAPPUIONLAUNCH%"
-option_4="%MODE%"
-option_5="%POLICYTOKEN%"
-option_6="%REINSTALLDRIVER%"
-option_7="%STRICTENFORCEMENT%"
-option_8="%UNATTENDEDMODEUI%"
-option_9="%USERDOMAIN%"
-option_10="%LAUNCHTRAY%"
-
-if [[ -n "${option_1}" ]]; then
-   add_option1="--cloudName ${option_1} "
+install_dir=`dirname $0`
+	
+	
+# Install PaperCut Client and launchagent
+	
+if [[ -e "$install_dir/PCClient.app" ]]; then
+		${LOGGER} "Installing PaperCut Client"
+		/bin/cp -p -R "$install_dir/PCClient.app" /Applications/
+		/bin/cp -p "$install_dir/com.papercut.client.plist" /Library/LaunchAgents/
+		/bin/cp -p "$install_dir/papercut-start.sh" /usr/local/munki/
+		# /bin/rm -f "$install_dir/com.papercut.client.plist"
+		/usr/sbin/chown root:wheel /Library/LaunchAgents/com.papercut.client.plist
+		/usr/bin/chmod 644 /Library/LaunchAgents/com.papercut.client.plist
+		/usr/sbin/chown root:wheel /usr/local/munki/papercut-start.sh
+		/usr/bin/chmod 644 /usr/local/munki/papercut-start.sh
+		/bin/launchctl load /Library/LaunchAgents/com.papercut.client.plist
+else
+		${LOGGER} "Could not find file"
 fi
 
-if [[ -n "${option_2}" ]]; then
-    add_option2="--deviceToken ${option_2} "
-fi
-
-if [[ -n "${option_3}" ]]; then
-    add_option3="--hideAppUIOnLaunch ${option_3} "
-fi
-
-if [[ -n "${option_4}" ]]; then
-    add_option4="--mode ${option_4} "
-fi
-
-if [[ -n "${option_5}" ]]; then
-    add_option5="--policyToken ${option_5} "
-fi
-
-if [[ -n "${option_6}" ]]; then
-    add_option6="--reinstallDriver ${option_6} "
-fi
-
-if [[ -n "${option_7}" ]]; then
-    add_option7="--strictEnforcement ${option_7} "
-fi
-
-if [[ -n "${option_8}" ]]; then
-    add_option8="--unattendedmodeui ${option_8} "
-fi
-
-if [[ -n "${option_9}" ]]; then
-    add_option9="--userDomain ${option_9} "
-fi
-					
-if [[ -n "${option_10}" ]]; then
-    add_option10="--launchTray ${option_9} "
-fi
-
-# Install the Zscaler app and configure it
-"${install_dir}/Zscaler-osx-%version%-installer.app/Contents/MacOS/installbuilder.sh" ${add_option1}${add_option2}${add_option3}${add_option4}${add_option5}${add_option6}${add_option7}${add_option8}${add_option9}</string>
-			</dict>
+exit
+			</string>
 		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>Copier</string>
+			<key>arguments</key>
+			<dict>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/Scripts/
 		<dict>
 			<key>Processor</key>
 			<string>PkgCreator</string>
@@ -162,7 +189,7 @@ fi
 					<key>pkgroot</key>
 					<string>%RECIPE_CACHE_DIR%/pkgroot</string>
 					<key>pkgname</key>
-					<string>%VENDOR%_%version%</string>
+					<string>%NAME%_%version%</string>
 					<key>pkgtype</key>
 					<string>flat</string>
 					<key>id</key>
