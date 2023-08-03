@@ -49,33 +49,6 @@
 			<key>Arguments</key>
 			<dict>
 				<key>file_path</key>
-				<string>%RECIPE_CACHE_DIR%/Scripts/com.papercut.client.agent</string>
-				<key>file_mode</key>
-				<string>0755</string>
-				<key>file_content</key>
-				<string><?xml version="1.0" encoding="UTF-8"?>
-  <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-  <plist version="1.0">
-  <dict>
-      <key>Label</key>
-      <string>com.papercut.client.agent</string>
-      <key>ProgramArguments</key>
-      <array>
-          <string>/Applications/PCClient.app/Contents/MacOS/JavaAppLauncher</string>
-      </array>
-      <key>KeepAlive</key>
-      <true/>
-  </dict>
-  </plist>
-				</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>FileCreator</string>
-			<key>Arguments</key>
-			<dict>
-				<key>file_path</key>
 				<string>%RECIPE_CACHE_DIR%/Scripts/preinstall</string>
 				<key>file_mode</key>
 				<string>0755</string>
