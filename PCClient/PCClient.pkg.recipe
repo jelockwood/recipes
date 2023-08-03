@@ -17,26 +17,6 @@
 	<string>com.github.jelockwood.recipes.download.PCClient</string>
 	<key>Process</key>
 	<array>
-	        <dict>
-			<key>Processor</key>
-			<string>FileFinder</string>
-			<key>Arguments</key>
-			<dict>
-				<key>pattern</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/*.app</string>
-			</dict>
-                </dict>
-		<dict>
-			<key>Processor</key>
-			<string>Versioner</string>
-			<key>Arguments</key>
-			<dict>
-				<key>input_plist_path</key>
-				<string>%found_filename%/Contents/Info.plist</string>
-				<key>plist_version_key</key>
-				<string>CFBundleShortVersionString</string>
-			</dict>
-		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>PkgRootCreator</string>
@@ -69,6 +49,26 @@
 			</dict>
 			<key>Processor</key>
 			<string>Unarchiver</string>
+		</dict>
+	        <dict>
+			<key>Processor</key>
+			<string>FileFinder</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pattern</key>
+				<string>%RECIPE_CACHE_DIR%/Scripts/*.app</string>
+			</dict>
+                </dict>
+		<dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%found_filename%/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+				<string>CFBundleShortVersionString</string>
+			</dict>
 		</dict>
 	</array>
 </dict>
