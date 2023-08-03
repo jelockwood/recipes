@@ -20,15 +20,19 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Printers</string>
 			<key>description</key>
-			<string> </string>
+			<string>Powerful print management for printers and MFDs</string>
 			<key>developer</key>
-			<string></string>
+			<string>PaperCut</string>
 			<key>display_name</key>
 			<string>PCClient</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
+			<true/>
+			<key>unattended_uninstall</key>
 			<true/>
 		</dict>
 	</dict>
@@ -39,29 +43,6 @@
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>archive_path</key>
-				<string>%pathname%</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-				<key>purge_destination</key>
-				<true/>
-			</dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
-				<key>dmg_root</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-			</dict>
-			<key>Processor</key>
-			<string>DmgCreator</string>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
