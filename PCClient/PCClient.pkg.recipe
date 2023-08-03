@@ -3,48 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of PCClient.</string>
+	<string>Packages the latest version of PCClient.</string>
 	<key>Identifier</key>
 	<string>com.github.jelockwood.recipes.pkg.PCClient</string>
-	<key>Input</key>
-	<dict>
-		<key>NAME</key>
-		<string>PCClient</string>
-        <key>VENDOR</key>
-        <string>PaperCut</string>
-        <!--See https://help.zscaler.com/z-app/customizing-zscaler-app-install-options-macos-->
-        <!--for configuration options-->
-        <!--CLOUDNAME corresponds to the value given to the cloudName switch-->
-        <key>CLOUDNAME</key>
-        <string></string>
-        <!--DEVICETOKEN corresponds to the value given to the deviceToken switch-->
-        <key>DEVICETOKEN</key>
-        <string></string>
-        <!--HIDEAPPUIONLAUNCH corresponds to the value given to the hideAppUIOnLaunch switch-->
-        <key>HIDEAPPUIONLAUNCH</key>
-        <string></string>
-        <!--MODE corresponds to the value given to the mode switch-->
-        <key>MODE</key>
-        <string></string>
-        <!--POLICYTOKEN corresponds to the value given to the policyToken switch-->
-        <key>POLICYTOKEN</key>
-        <string></string>
-        <!--REINSTALLDRIVER corresponds to the value given to the reinstallDriver switch-->
-        <key>REINSTALLDRIVER</key>
-        <string></string>
-        <!--STRICTENFORCEMENT corresponds to the value given to the strictEnforcement switch-->
-        <key>STRICTENFORCEMENT</key>
-        <string></string>
-        <!--UNATTENDEDMODEUI corresponds to the value given to the unattendedmodeui switch-->
-        <key>UNATTENDEDMODEUI</key>
-        <string></string>
-        <!--USERDOMAIN corresponds to the value given to the userDomain switch-->
-        <key>USERDOMAIN</key>
-        <string></string>
-        <!--LAUNCHTRAY corresponds to the value given to the launchTray switch-->
-        <key>LAUNCHTRAY</key>
-        <string></string>
-	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
@@ -63,13 +24,13 @@
 		<dict>
 			<key>Processor</key>
 			<string>Versioner</string>
-            <key>Arguments</key>
-            <dict>
-               <key>input_plist_path</key>
-               <string>%found_filename%/Contents/Info.plist</string>
-               <key>plist_version_key</key>
-               <string>CFBundleShortVersionString</string>
-            </dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%found_filename%/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+				<string>CFBundleShortVersionString</string>
+			</dict>
 		</dict>
 		<dict>
 			<key>Processor</key>
@@ -107,6 +68,7 @@
   </dict>
   </plist>
 				</string>
+		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>FileCreator</string>
