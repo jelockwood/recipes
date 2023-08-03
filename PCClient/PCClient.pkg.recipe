@@ -144,7 +144,9 @@ exit
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/Scripts/
+				<string>%RECIPE_CACHE_DIR%/Scripts/</string>
+			</dict>
+		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>PkgCreator</string>
