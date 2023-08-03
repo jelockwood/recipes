@@ -51,6 +51,15 @@
 	<string>com.github.jelockwood.recipes.download.PCClient</string>
 	<key>Process</key>
 	<array>
+	        <dict>
+	            <key>Processor</key>
+	            <string>FileFinder</string>
+	            <key>Arguments</key>
+	            <dict>
+			<key>pattern</key>
+                	<string>%RECIPE_CACHE_DIR%/%VENDOR%/PCClient.app</string>
+		    </dict>
+                </dict>
 		<dict>
 			<key>Processor</key>
 			<string>Versioner</string>
