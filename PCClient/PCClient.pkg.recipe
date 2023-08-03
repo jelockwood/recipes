@@ -66,8 +66,6 @@
 				<string>%pathname%</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/Scripts</string>
-				<key>purge_destination</key>
-				<true/>
 			</dict>
 			<key>Processor</key>
 			<string>Unarchiver</string>
