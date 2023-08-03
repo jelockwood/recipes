@@ -144,7 +144,7 @@ exit
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/Scripts/</string>
+				<string>%RECIPE_CACHE_DIR%/Scripts/%NAME%.app</string>
 			</dict>
 		</dict>
 		<dict>
