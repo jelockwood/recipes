@@ -183,6 +183,22 @@ exit
 				</dict>
 			</dict>
 		</dict>
+		<dict>
+			<key>Processor</key>
+		<dict>
+			<key>Processor</key>
+			<string>PathDeleter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>path_list</key>
+				<array>
+					<string>%RECIPE_CACHE_DIR%/pkgroot</string>
+					<string>%RECIPE_CACHE_DIR%/Scripts</string>
+					<string>%RECIPE_CACHE_DIR%/downloads/%my_zip%</string>
+				</array>
+			</dict>
+		</dict>
+		</dict>
 	</array>
 </dict>
 </plist>
