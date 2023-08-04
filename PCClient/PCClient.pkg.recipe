@@ -109,8 +109,8 @@ targetLocation=$2
 targetVolume=$3
 
 
-sudo rm -R /Applications/PCClient.app/
-sudo killall JavaAppLauncher
+/usr/bin/sudo /bin/rm -R /Applications/PCClient.app/
+/usr/bin/sudo /usr/bin/killall JavaAppLauncher
 
 exit 0		## Success
 exit 1		## Failure
