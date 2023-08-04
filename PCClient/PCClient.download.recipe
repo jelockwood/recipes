@@ -20,8 +20,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%.zip</string>
 				<key>url</key>
 				<string>%my_url%/%my_zip%</string>
 			</dict>
