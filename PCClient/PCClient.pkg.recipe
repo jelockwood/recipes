@@ -185,8 +185,6 @@ exit
 		</dict>
 		<dict>
 			<key>Processor</key>
-		<dict>
-			<key>Processor</key>
 			<string>PathDeleter</string>
 			<key>Arguments</key>
 			<dict>
@@ -197,7 +195,6 @@ exit
 					<string>%RECIPE_CACHE_DIR%/downloads/%my_zip%</string>
 				</array>
 			</dict>
-		</dict>
 		</dict>
 	</array>
 </dict>
