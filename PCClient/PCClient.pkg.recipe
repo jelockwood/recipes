@@ -23,7 +23,7 @@
 				<key>pkgdirs</key>
 				<dict/>
 				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/Scripts</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
 			</dict>
 			<key>Processor</key>
 			<string>PkgRootCreator</string>
