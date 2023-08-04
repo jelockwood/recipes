@@ -61,7 +61,7 @@ If you fail to correctly define the above in your override recipe then the downl
 
 The Pkg recipe
 ------------
-The pkg recipe unarchives the zip file, it also creates preinstall and postinstall scripts a launchdaemon plist and then builds an installer pkg.
+The pkg recipe unarchives the zip file, it also creates preinstall and postinstall scripts, a launchdaemon plist and then builds an installer pkg.
 
 The Munki Recipe
 ------------
