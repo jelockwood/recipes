@@ -10,7 +10,7 @@ The PaperCut MF server installer when installed automatically generates a matchi
 
 I have set my PaperCut server to share the subdirectory via a web server and also set the server to run an automated task to make a zip file of the Mac client. The download recipe therefore downloads this zip file. It should be possbile for other users to do the same whether they are using a Mac, Windows or Linux server.
 
-You could either put the zip file in its own dedicated folder and share just that via a webserver which maybe considered a more secure option, or you could share the entire client subdirectory contains the Mac, Windows and client sub-subdirectories making access to those possible also via URLs.
+You could either put the zip file in its own dedicated folder and share just that via a webserver which maybe considered a more secure option, or you could share the entire client subdirectory which contains the Mac, Windows and client sub-subdirectories making access to those possible also via URLs.
 
 The download recipe now relies on both the URL and the zip file name to be supplied via a users override recipe. The following is what therefore the URLDownloader section of the download recipe looks like.
 
