@@ -19,7 +19,7 @@ The download recipe now relies on both the URL and the zip file name to be suppl
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>%my_url%/%my_zip%</string>
+				<string>%my_url%%my_zip%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -27,7 +27,7 @@ The download recipe now relies on both the URL and the zip file name to be suppl
 	</array>
 ~~~
 
-Note the important fact that the URLDownloader processor inserts the forward slash before the name of the zip file.
+Note the important fact that the URLDownloader processor _does not_ insert the forward slash before the name of the zip file, you should include this at the end of your URL value in your override recipe.
 
 If your full URL looks like this ```https://myserver.mydomain.com/myfile.zip``` then you need to put the following in your override recipe as the Input section.
 
@@ -37,7 +37,7 @@ If your full URL looks like this ```https://myserver.mydomain.com/myfile.zip``` 
 		<key>NAME</key>
 		<string>PCClient</string>
 		<key>my_url</key>
-		<string>https://myserver.mydomain.com</string>
+		<string>https://myserver.mydomain.com/</string>
 		<key>my_zip</key>
 		<string>myfile.zip</string>
 	</dict>
@@ -51,7 +51,7 @@ If your full URL looks like this ```https://myserver.mydomain.com/folder/folder/
 		<key>NAME</key>
 		<string>PCClient</string>
 		<key>my_url</key>
-		<string>https://myserver.mydomain.com/folder/folder</string>
+		<string>https://myserver.mydomain.com/folder/folder/</string>
 		<key>my_zip</key>
 		<string>myfile.zip</string>
 	</dict>
