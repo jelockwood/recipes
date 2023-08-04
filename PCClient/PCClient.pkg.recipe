@@ -108,9 +108,14 @@ pathToPackage=$1
 targetLocation=$2
 targetVolume=$3
 
-
-/usr/bin/sudo /bin/rm -R /Applications/PCClient.app/
-/usr/bin/sudo /usr/bin/killall JavaAppLauncher
+if [[ -e "/Library/LaunchAgents/com.papercut.client.plist" ]]; then
+	/bin/launchctl unload /Library/LaunchAgents/com.papercut.client.plist
+	/bin/rm -f "Library/LaunchAgents/com.papercut.client.plist"
+fi
+if [[ -e "/Applications/PCClient.app" ]]; then
+	/usr/bin/sudo /bin/rm -R /Applications/PCClient.app/
+	/usr/bin/sudo /usr/bin/killall JavaAppLauncher
+fi
 
 exit 0		## Success
 exit 1		## Failure
@@ -140,12 +145,13 @@ install_dir=`dirname $0`
 if [[ -e "$install_dir/PCClient.app" ]]; then
 		${LOGGER} "Installing PaperCut Client"
 		/bin/cp -p -R "$install_dir/PCClient.app" /Applications/
-		/bin/cp -p "$install_dir/papercut-start.sh" /usr/local/munki/
+		# /bin/cp -p "$install_dir/papercut-start.sh" /usr/local/munki/
 		# /bin/rm -f "$install_dir/com.papercut.client.plist"
+		/bin/cp -p "$install_dir/com.papercut.client.plist" /Library/LaunchAgents/com.papercut.client.plist
 		/usr/sbin/chown root:wheel /Library/LaunchAgents/com.papercut.client.plist
 		/usr/bin/chmod 644 /Library/LaunchAgents/com.papercut.client.plist
-		/usr/sbin/chown root:wheel /usr/local/munki/papercut-start.sh
-		/usr/bin/chmod 644 /usr/local/munki/papercut-start.sh
+		# /usr/sbin/chown root:wheel /usr/local/munki/papercut-start.sh
+		# /usr/bin/chmod 644 /usr/local/munki/papercut-start.sh
 		/bin/launchctl load /Library/LaunchAgents/com.papercut.client.plist
 else
 		${LOGGER} "Could not find file"
