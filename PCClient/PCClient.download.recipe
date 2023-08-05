@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>%my_url%/%my_zip%</string>
+				<string>%my_url%%my_zip%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
