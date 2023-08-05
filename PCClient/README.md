@@ -74,6 +74,3 @@ The munki recipe then uploads the installer pkg to a Munki repo.
 As discussed above with regards to the download recipe you need to edit your own override recipe so that the URL and zip file name will be provided to AutoPkg.
 
 This approach has allowed me to create a set of recipes that can be easily used for all users without having to hardcode in to my own recipes the URL of the server and therefore require all users to make their own copies of these recipes and put them on their own Github repo.
-
-I am also hoping to allow the override recipe to define the PaperCut server address to use to automatically modify the config.properties file inside the Mac PCClient.app before the installer pkg is created. Yes, the PaperCut server is supposed to set this automatically but this gives more control if needed.
-
