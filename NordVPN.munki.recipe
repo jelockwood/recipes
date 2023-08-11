@@ -5,7 +5,7 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v1.1.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of NordVPN and imports it into Munki.</string>
+	<string>Downloads the latest version of NordLayer VPN and imports it into Munki.</string>
 	<key>Identifier</key>
 	<string>com.github.jelockwood.recipes.munki.NordVPN</string>
 	<key>Input</key>
@@ -27,7 +27,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Military-grade protection online.</string>
+			<string>Ensure that everyone working both in-office and remotely can connect to your business network securely. NordLayer guarantees that every employee can access protected company data simply and securely.</string>
 			<key>developer</key>
 			<string>TEFINKOM &amp; CO S.A</string>
 			<key>category</key>
