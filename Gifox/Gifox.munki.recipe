@@ -5,39 +5,39 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v1.0.5 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Rocket.Chat.Electron and imports it into Munki.</string>
+	<string>Downloads the latest version of Gifox and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.jelockwood.recipes.munki.Rocket.Chat.Electron</string>
+	<string>com.github.jelockwood.recipes.munki.Gifox</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Rocket.Chat+</string>
+		<string>Gifox</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Utilities</string>
 			<key>description</key>
-			<string>Official  OSX, Windows, and Linux Desktop Clients for Rocket.Chat </string>
+			<string>Delightful GIF Recording and Sharing App</string>
 			<key>developer</key>
-			<string>Rocket.Chat Technologies Corp.</string>
+			<string>Interactive Works LTD</string>
 			<key>display_name</key>
-			<string>Rocket.Chat+</string>
+			<string>Gifox</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
 		</dict>
-		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
-	        <string>True</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jelockwood.recipes.download.Rocket.Chat.Electron</string>
+	<string>com.github.jelockwood.recipes.download.Gifox</string>
 	<key>Process</key>
 	<array>
 		<dict>
