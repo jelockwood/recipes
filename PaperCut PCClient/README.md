@@ -1,4 +1,4 @@
-PCClient
+PaperCut PCClient
 ============
 
 A set of AutoPkg recipes to download the Mac PaperCut Client from a PaperCut MF server.
