@@ -4,7 +4,7 @@ A script for finding your Mac
 ![/support_files/pinpoint-logo.png](https://github.com/jelockwood/pinpoint/blob/master/support_files/pinpoint-logo.png)
 Image created by Macrovector - [Freepik.com](https://www.freepik.com/free-photos-vectors/label)
 
-Author: John Lockwood - https://jelockwood.blogspot.co.uk 
+Author: John Lockwood - https://github.com/jelockwood/pinpoint
 
 # Info
 
