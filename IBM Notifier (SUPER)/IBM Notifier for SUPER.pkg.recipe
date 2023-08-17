@@ -97,6 +97,41 @@ exit 1		## Failure
 				</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>FileCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>file_path</key>
+				<string>%RECIPE_CACHE_DIR%/Scripts/postinstall</string>
+				<key>file_mode</key>
+				<string>0755</string>
+				<key>file_content</key>
+				<string>#!/bin/sh
+# Install IBM Notifier app in custom location for use with SUPER
+LOGGER="/usr/bin/logger"
+
+# Determine working directory
+install_dir=`dirname $0`
+	
+	
+if [[ -e "$install_dir/PCClient.app" ]]; then
+		${LOGGER} "Installing PaperCut Client"
+		if [[ -e "/Library/Management/super/IBM Notifier.app" ]]; then
+			${LOGGER} "Existing copy found of IBM Notifier.app in custom location, proceeding to install update."
+			/bin/cp -p -R "$install_dir/IBM Notifier.app" "/Library/Management/super/"
+		else
+			${LOGGER} "No existing copy of IBM Notifier.app in custom location"
+			exit 1
+		fi
+else
+		${LOGGER} "Could not find source file"
+fi
+
+exit
+				</string>
+			</dict>
+		</dict>
 	</array>
 </dict>
 </plist>
