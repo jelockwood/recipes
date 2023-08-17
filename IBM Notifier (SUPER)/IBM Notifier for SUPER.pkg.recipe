@@ -29,15 +29,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>app_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/IBM Notifier.app</string>
-			</dict>
-			<key>Processor</key>
-			<string>AppPkgCreator</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>pkgdirs</key>
 				<dict/>
 				<key>pkgroot</key>
