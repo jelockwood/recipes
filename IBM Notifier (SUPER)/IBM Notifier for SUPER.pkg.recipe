@@ -20,15 +20,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/IBM Notifier.app/Contents/Info.plist</string>
-			</dict>
-			<key>Processor</key>
-			<string>Versioner</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>pkgdirs</key>
 				<dict/>
 				<key>pkgroot</key>
@@ -57,6 +48,26 @@
 				<string>%RECIPE_CACHE_DIR%/Scripts/IBM Notifier.app</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/*.app</string>
+			</dict>
+		</dict>
+	        <dict>
+			<key>Processor</key>
+			<string>FileFinder</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pattern</key>
+				<string>%RECIPE_CACHE_DIR%/Scripts/*.app</string>
+			</dict>
+                </dict>
+		<dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%found_filename%/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+				<string>CFBundleShortVersionString</string>
 			</dict>
 		</dict>
 	</array>
