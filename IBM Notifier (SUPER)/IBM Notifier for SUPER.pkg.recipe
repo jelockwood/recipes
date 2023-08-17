@@ -70,6 +70,33 @@
 				<string>CFBundleShortVersionString</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>FileCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>file_path</key>
+				<string>%RECIPE_CACHE_DIR%/Scripts/preinstall</string>
+				<key>file_mode</key>
+				<string>0755</string>
+				<key>file_content</key>
+				<string>#!/bin/sh
+## preinstall
+
+pathToScript=$0
+pathToPackage=$1
+targetLocation=$2
+targetVolume=$3
+
+if [[ -e "/Library/Management/super/IBM Notifier.app" ]]; then
+	/usr/bin/sudo /bin/rm -R "/Library/Management/super/IBM Notifier.app/"
+fi
+
+exit 0		## Success
+exit 1		## Failure
+				</string>
+			</dict>
+		</dict>
 	</array>
 </dict>
 </plist>
