@@ -45,25 +45,17 @@ This recipe uses the standard downloader but creates a custom installer pkg to i
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>installs</key>
-			<array>
-				<dict>
-					<key>CFBundleIdentifier</key>
-					<string>com.ibm.cio.notifier</string>
-					<key>CFBundleName</key>
-					<string>IBM Notifier</string>
-					<key>CFBundleShortVersionString</key>
-					<string>2.0.0</string>
-					<key>minosversion</key>
-					<string>10.9.0</string>
-					<key>path</key>
+			<key>Arguments</key>
+			<dict>
+				<key>faux_root</key>
+				<string>%RECIPE_CACHE_DIR%</string>
+				<key>installs_item_paths</key>
+				<array>
 					<string>/Library/Management/super/IBM Notifier.app</string>
-					<key>type</key>
-					<string>application</string>
-					<key>version_comparison_key</key>
-					<string>CFBundleShortVersionString</string>
-				</dict>
-			</array>
+				</array>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiInstallsItemsCreator</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
