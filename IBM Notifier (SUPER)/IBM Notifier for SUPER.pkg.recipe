@@ -144,7 +144,7 @@ exit
 					<key>pkgdir</key>
 					<string>%RECIPE_CACHE_DIR%</string>
 					<key>pkgname</key>
-					<string>testtest</string>
+					<string>testtest_%version%</string>
 					<key>pkgtype</key>
 					<string>flat</string>
 					<key>id</key>
