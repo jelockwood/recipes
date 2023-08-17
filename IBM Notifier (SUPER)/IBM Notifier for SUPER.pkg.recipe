@@ -30,7 +30,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>app_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/IBM Notifier-%version%.pkg</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/IBM Notifier.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>AppPkgCreator</string>
@@ -137,7 +137,7 @@ if [[ -e "$install_dir/PCClient.app" ]]; then
 		${LOGGER} "Installing PaperCut Client"
 		if [[ -e "/Library/Management/super/IBM Notifier.app" ]]; then
 			${LOGGER} "Existing copy found of IBM Notifier.app in custom location, proceeding to install update."
-			/bin/cp -p -R "$install_dir/IBM Notifier.app" /Library/Management/super/
+			/bin/cp -p -R "$install_dir/IBM Notifier.app" "/Library/Management/super/"
 		else
 			${LOGGER} "No existing copy of IBM Notifier.app in custom location"
 			exit 1
@@ -160,7 +160,7 @@ exit
 					<key>pkgroot</key>
 					<string>%RECIPE_CACHE_DIR%/pkgroot</string>
 					<key>pkgname</key>
-					<string>%NAME%_%version%</string>
+					<string>%NAME%_%version%.pkg</string>
 					<key>pkgtype</key>
 					<string>flat</string>
 					<key>id</key>
