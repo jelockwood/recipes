@@ -18,13 +18,13 @@
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Processor</key>
-			<string>AppDmgVersioner</string>
 			<key>Arguments</key>
 			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
+				<key>app_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/IBM Notifier.app</string>
 			</dict>
+			<key>Processor</key>
+			<string>AppPkgCreator</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
