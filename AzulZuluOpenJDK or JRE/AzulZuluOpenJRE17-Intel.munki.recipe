@@ -46,6 +46,20 @@ Munki Architectures: x86_64, arm64
 				<array>
 					<string>testing</string>
 				</array>
+				<array>
+					<dict>
+						<key>CFBundleShortVersionString</key>
+						<string>17.0.7</string>
+						<key>CFBundleVersion</key>
+						<string></string>
+						<key>path</key>
+						<string>/Library/Java/JavaVirtualMachines/zulu-17.jre<string>
+						<key>type</key>
+						<string>bundle</string>
+						<key>version_comparison_key</key>
+						<string>CFBundleShortVersionString</string>
+					</dict>
+				</array>
 				<key>category</key>
 				<string>%MUNKI_CATEGORY%</string>
 				<key>description</key>
