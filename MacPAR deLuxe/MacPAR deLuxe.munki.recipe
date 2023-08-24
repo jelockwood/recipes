@@ -20,8 +20,12 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Utilities</string>
 			<key>description</key>
-			<string> </string>
+			<string>Often, binary content comes in the form of sets of many files that together form a “rar” archive. MacPAR deLuxe assist you in combining these files after the download finishes.
+•It verifies that the file set is complete, and all files are undamaged. MacPAR deLuxe can recover missing information by processing so called "par" and "par2" files.
+•After the verification step, MacPAR deLuxe unpacks the data. If possible with its built-in unrar engine, or otherwise by launching the appropriate program.</string>
 			<key>developer</key>
 			<string>Gerard Putter</string>
 			<key>display_name</key>
