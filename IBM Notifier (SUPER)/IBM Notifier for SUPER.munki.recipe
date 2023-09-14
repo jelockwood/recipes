@@ -39,8 +39,6 @@ This recipe uses the standard downloader but creates a custom installer pkg to i
 					<string>IBM Notifier</string>
 					<key>CFBundleShortVersionString</key>
 					<string>3.0.0</string>
-					<key>CFBundleVersion</key>
-					<string>104</string>
 					<key>minosversion</key>
 					<string>11.0</string>
 					<key>path</key>
