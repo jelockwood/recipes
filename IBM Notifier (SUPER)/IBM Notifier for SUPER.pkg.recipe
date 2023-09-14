@@ -117,8 +117,8 @@ LOGGER="/usr/bin/logger"
 install_dir=`dirname $0`
 	
 	
-if [[ -e "$install_dir/PCClient.app" ]]; then
-		${LOGGER} "Installing PaperCut Client"
+if [[ -e "$install_dir/IBM Notifier.app" ]]; then
+		${LOGGER} "Installing IBM Notifier (SUPER)"
 		if [[ -e "/Library/Management/super/IBM Notifier.app" ]]; then
 			${LOGGER} "Existing copy found of IBM Notifier.app in custom location, proceeding to install update."
 			/bin/rm -rf "/Library/Management/super/IBM Notifier.app/"
