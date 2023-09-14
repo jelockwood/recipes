@@ -87,9 +87,11 @@ pathToScript=$0
 pathToPackage=$1
 targetLocation=$2
 targetVolume=$3
+LOGGER="/usr/bin/logger"
 
 if [[ -e "/Library/Management/super/IBM Notifier.app" ]]; then
-	/usr/bin/sudo /bin/rm -R "/Library/Management/super/IBM Notifier.app/"
+	${LOGGER} "Existing copy found of IBM Notifier.app in custom location, proceeding to install update."
+	# /usr/bin/sudo /bin/rm -R "/Library/Management/super/IBM Notifier.app/"
 fi
 
 exit 0		## Success
