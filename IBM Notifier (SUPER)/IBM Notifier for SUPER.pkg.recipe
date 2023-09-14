@@ -121,7 +121,10 @@ if [[ -e "$install_dir/PCClient.app" ]]; then
 		${LOGGER} "Installing PaperCut Client"
 		if [[ -e "/Library/Management/super/IBM Notifier.app" ]]; then
 			${LOGGER} "Existing copy found of IBM Notifier.app in custom location, proceeding to install update."
-			/bin/rm -R "/Library/Management/super/IBM Notifier.app/"
+			/bin/rm -rf "/Library/Management/super/IBM Notifier.app/"
+			/bin/sleep 10
+			/bin/date > "/Library/Management/super/debug.txt"
+			echo "deleted IBM" >> "/Library/Management/super/debug.txt"
 			/bin/cp -p -R "$install_dir/IBM Notifier.app" "/Library/Management/super/"
 		else
 			${LOGGER} "No existing copy of IBM Notifier.app in custom location"
