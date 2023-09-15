@@ -166,7 +166,7 @@ Munki Architectures: x86_64, arm64
 						<string>%install_location%</string>
 					</array>
 					<key>version_comparison_key</key>
-					<string>CFBundleVersion</string>
+					<string>CFBundleShortVersionString</string>
 				</dict>
 			</dict>
 			<dict>
