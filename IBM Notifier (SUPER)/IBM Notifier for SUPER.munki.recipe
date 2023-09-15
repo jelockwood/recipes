@@ -30,27 +30,6 @@ This recipe uses the standard downloader but creates a custom installer pkg to i
 			<string>International Business Machines Corp</string>
 			<key>display_name</key>
 			<string>IBM Notifier (SUPER)</string>
-			<key>installs</key>
-			<array>
-				<dict>
-					<key>CFBundleIdentifier</key>
-					<string>com.ibm.cio.notifier</string>
-					<key>CFBundleName</key>
-					<string>IBM Notifier</string>
-					<key>CFBundleShortVersionString</key>
-					<string>3.0.0</string>
-					<key>CFBundleVersion</key>
-					<string>104</string>
-					<key>minosversion</key>
-					<string>11.0</string>
-					<key>path</key>
-					<string>/Library/Management/super/IBM Notifier.app</string>
-					<key>type</key>
-					<string>application</string>
-					<key>version_comparison_key</key>
-					<string>CFBundleShortVersionString</string>
-				</dict>
-			</array>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -74,6 +53,8 @@ This recipe uses the standard downloader but creates a custom installer pkg to i
 				<array>
 					<string>/Library/Management/super/IBM Notifier.app</string>
 				</array>
+				<key>version_comparison_key</key>
+				<string>CFBundleShortVersionString</string>
 			</dict>
 			<key>Processor</key>
 			<string>MunkiInstallsItemsCreator</string>
