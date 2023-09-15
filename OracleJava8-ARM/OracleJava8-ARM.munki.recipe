@@ -36,6 +36,10 @@ the prefPane bundle, which has historically had consistent versioning.
 			<string>Oracle Java 8</string>
 			<key>minimum_os_version</key>
 			<string>10.7.3</string>
+			<key>supported_architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
