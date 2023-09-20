@@ -1,5 +1,5 @@
 # recipes
-Autopkg recipies
+AutoPkg recipies
 
 These are my personal [AutoPkg](https://github.com/autopkg/autopkg) recipes. If you find any of them not working for you then raise an issue above and I will dependent on having time available see if I can fix it.
 
