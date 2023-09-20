@@ -1,6 +1,9 @@
 IBM Notifier (SUPER)
 =========
 
+[UPDATE - I have since discovered that version 3.0 of the SUPER script deliberately installs an older version of IBM Notifier, version 2.9.1. It also when it does a normal automated run checks to see if the copy has changed or is missing and therefore also will replace any newer version with the same 2.9.1. Therefore currently there is no point using this recipe. If this behaviour changes I will update this README but clearly until then there is no point using this recipe.
+]
+
 [IBM Notifier](https://github.com/IBM/mac-ibm-notifications) is an app written by IBM's internal support team and allows scripts to use it to display dialogs complete with fields, progress bars, etc.
 
 It is normally installed in the the /Applications/ directory and there are [existing AutoPkg recipes](https://github.com/autopkg/precursorca-recipes/tree/master/IMB.Notifier) to download and update IBM Notifier in this location as written by Alex Narvey aka @precursoca. However another open source project called [S.U.P.E.R.](https://github.com/Macjutsu/super) downloads and installs a copy in to a non-standard location in /Library/Management/super/
