@@ -51,6 +51,8 @@ Munki Architectures: x86_64, arm64
 					<dict>
 						<key>CFBundleShortVersionString</key>
 						<string>17.0.7</string>
+						<key>CFBundleVersion</key>
+						<string></string>
 						<key>path</key>
 						<string>/Library/Java/JavaVirtualMachines/zulu-17.jre</string>
 						<key>type</key>
