@@ -3,27 +3,46 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
+	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of FileZilla for Apple Silicon Mac Clients.</string>
+	<string>Downloads the latest version of FileZilla.</string>
 	<key>Identifier</key>
 	<string>com.github.jelockwood.recipes.download.FileZilla-Arm</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>FileZilla</string>
+		<key>SEARCH_URL</key>
+		<string>https://download.filezilla-project.org/client/</string>
+		<key>VERSION_URL</key>
+		<string>https://filezilla-project.org/download.php?type=client</string>
+		<key>CHANNEL</key>
+		<string>release</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>1.0.0</string>
+	<string>2.3</string>
 	<key>Process</key>
 	<array>
+	        <dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+		                <string>%VERSION_URL%</string>
+		                <key>re_pattern</key>
+		                <string>The latest stable version of FileZilla Client is ([0-9.]+)</string>
+		                <key>result_output_var_name</key>
+		                <string>version</string>
+			</dict>
+	        </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%.zip</string>
+				<string>%NAME%.tgz</string>
 				<key>url</key>
-				<string>https://shermanikk.net/stuff/FileZilla-macos-arm64.zip</string>
+				<string>https://download.filezilla-project.org/client/FileZilla_%version%_macos-arm64.app.tar.bz2</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -51,7 +70,7 @@
 				<key>input_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/FileZilla.app</string>
 				<key>requirement</key>
-				<string>identifier "org.filezilla-project.filezilla" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: salewis@gmail.com (DSX9YL9QLX)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+				<string>identifier "org.filezilla-project.filezilla" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "5VPGKXL75N"</string>
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
