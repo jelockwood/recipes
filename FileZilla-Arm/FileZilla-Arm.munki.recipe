@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of FileZilla for Apple Silicon Macs and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.jelockwood.recipe.munki.FileZilla-Arm</string>
+	<string>com.github.jelockwood.recipes.FileZilla-Arm</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -43,7 +43,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.jelockwood.recipe.download.FileZilla-Arm</string>
+	<string>com.github.jelockwood.recipes.FileZilla-Arm</string>
 	<key>Process</key>
 	<array>
 		<dict>
