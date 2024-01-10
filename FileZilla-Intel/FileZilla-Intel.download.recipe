@@ -2,79 +2,65 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>Description</key>
-    <string>Downloads the latest version FileZilla for Intel Mac Client.</string>
-    <key>Identifier</key>
-    <string>com.github.jelockwood.recipes.download.FileZilla-Intel</string>
-    <key>Input</key>
-    <dict>
-        <key>NAME</key>
-        <string>FileZilla</string>
-        <key>SEARCH_URL</key>
-        <string>https://download.filezilla-project.org/client/</string>
-        <key>VERSION_URL</key>
-        <string>https://filezilla-project.org/download.php?type=client</string>
-        <key>CHANNEL</key>
-        <string>release</string>
-    </dict>
-    <key>MinimumVersion</key>
-    <string>0.2.9</string>
-    <key>Process</key>
-    <array>
-        <dict>
-            <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>%VERSION_URL%</string>
-                <key>re_pattern</key>
-                <string>The latest stable version of FileZilla Client is ([0-9.]+)</string>
-                <key>result_output_var_name</key>
-                <string>version</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>URLDownloader</string>
-            <key>Arguments</key>
-            <dict>
-            	<!-- Due to the use of mirrors, the ETag and Modified Dates cannot be used -->
-          		<key>CHECK_FILESIZE_ONLY</key>
-          		<true/>
-                <key>url</key>
-                <string>https://download.filezilla-project.org/client/FileZilla_%version%_macosx-x86.app.tar.bz2</string>
-                <key>filename</key>
-                <string>%NAME%.tar.bz2</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
-        </dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of FileZilla.</string>
+	<key>Identifier</key>
+	<string>com.github.jelockwood.recipes.download.FileZilla-Intel</string>
+	<key>Input</key>
 	<dict>
-		<key>Arguments</key>
-		<dict>
-			<key>archive_path</key>
-			<string>%pathname%</string>
-			<key>destination_path</key>
-			<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-			<key>purge_destination</key>
-			<true/>
-		</dict>
-		<key>Processor</key>
-		<string>Unarchiver</string>
+		<key>NAME</key>
+		<string>FileZilla</string>
+		<key>SEARCH_URL</key>
+		<string>https://download.filezilla-project.org/client/</string>
+		<key>VERSION_URL</key>
+		<string>https://filezilla-project.org/download.php?type=client</string>
+		<key>CHANNEL</key>
+		<string>release</string>
 	</dict>
-	<dict>
-		<key>Arguments</key>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>Process</key>
+	<array>
+	        <dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+		                <string>%VERSION_URL%</string>
+		                <key>re_pattern</key>
+		                <string>The latest stable version of FileZilla Client is ([0-9.]+)</string>
+		                <key>result_output_var_name</key>
+		                <string>version</string>
+			</dict>
+	        </dict>
 		<dict>
-			<key>archive_path</key>
-			<string>%pathname%</string>
-			<key>destination_path</key>
-			<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-			<key>purge_destination</key>
-			<true/>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.tgz</string>
+				<key>url</key>
+				<string>https://download.filezilla-project.org/client/FileZilla_%version%_macos-x86.app.tar.bz2</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
 		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>archive_path</key>
+				<string>%pathname%</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
 			<key>Processor</key>
 			<string>Unarchiver</string>
 		</dict>
