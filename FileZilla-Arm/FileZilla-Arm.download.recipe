@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of FileZilla for Apple Silicon Mac Clients.</string>
 	<key>Identifier</key>
-	<string>com.jelockwood.recipe.download.FileZilla-Arm</string>
+	<string>com.github.jelockwood.recipes.download.FileZilla-Arm</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
