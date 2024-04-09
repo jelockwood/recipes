@@ -24,6 +24,8 @@
 			<string>Intuitive outliner.</string>
 			<key>developer</key>
 			<string>Scribe</string>
+			<key>category</key>
+			<string>Utilities</string>
 			<key>display_name</key>
 			<string>Scribe</string>
 			<key>name</key>
