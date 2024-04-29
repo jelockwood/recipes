@@ -24,6 +24,8 @@
 			<string>Complete iOS device manager (was DiskAid).</string>
 			<key>developer</key>
 			<string>DigiDNA SARL</string>
+			<key>category</key>
+			<string>Utilities</string>
 			<key>display_name</key>
 			<string>iMazing3</string>
 			<key>name</key>
