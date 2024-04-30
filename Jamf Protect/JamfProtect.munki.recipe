@@ -18,6 +18,12 @@
             <array>
                 <string>testing</string>
             </array>
+        	<key>category</key>
+        	<string>Admin Utils</string>
+        	<key>description</key>
+        	<string>Jamf Protect — endpoint protection for Mac and mobile.
+
+Endpoint security, threat defense and content filtering.</string>
             <key>display_name</key>
             <string>Jamf Protect</string>
             <key>name</key>
