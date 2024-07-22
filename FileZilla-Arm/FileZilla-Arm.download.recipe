@@ -61,6 +61,23 @@
 		                <string>dlserver</string>
 			</dict>
 	        </dict>
+	        <dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+		                <string>%VERSION_URL%</string>
+				<key>request_headers</key>
+				<dict>
+					<key>user-agent</key>
+					<string>%USER_AGENT%</string>
+				</dict>
+		                <key>re_pattern</key>
+		                <string>_macos-arm64.app.tar.bz2(\?h=.*[0-9])"</string>
+		                <key>result_output_var_name</key>
+		                <string>token</string>
+			</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
