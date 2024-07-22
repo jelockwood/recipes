@@ -43,13 +43,49 @@
 		                <string>version</string>
 			</dict>
 	        </dict>
+	        <dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+		                <string>%VERSION_URL%</string>
+				<key>request_headers</key>
+				<dict>
+					<key>user-agent</key>
+					<string>%USER_AGENT%</string>
+				</dict>
+		                <key>re_pattern</key>
+		                <string>dl([0-9]+).cdn.filezilla-project.org/client/FileZilla_3.67.1_macos-arm64.app.tar</string>
+		                <key>result_output_var_name</key>
+		                <string>dlserver</string>
+			</dict>
+	        </dict>
+	        <dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+		                <string>%VERSION_URL%</string>
+				<key>request_headers</key>
+				<dict>
+					<key>user-agent</key>
+					<string>%USER_AGENT%</string>
+				</dict>
+		                <key>re_pattern</key>
+		                <string>_macos-arm64.app.tar.bz2(\?h=.*[0-9])</string>
+		                <key>result_output_var_name</key>
+		                <string>token</string>
+			</dict>
+	        </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
 				<string>%NAME%.tgz</string>
 				<key>url</key>
-				<string>https://download.filezilla-project.org/client/FileZilla_%version%_macos-arm64.app.tar.bz2</string>
+				<string>https://dl%dlserver%.cdn.filezilla-project.org/client/FileZilla_%version%_macos-arm64.app.tar.bz2%token%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
