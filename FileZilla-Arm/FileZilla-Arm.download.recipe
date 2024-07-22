@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+n%<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -13,7 +13,7 @@
 		<key>NAME</key>
 		<string>FileZilla</string>
 		<key>USER_AGENT</key>
-		<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10</string>
+		<string>Mozilla/5.0 (Macintosh; Arm Mac OS X 10_8_3) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10</string>
 		<key>SEARCH_URL</key>
 		<string>https://download.filezilla-project.org/client/</string>
 		<key>VERSION_URL</key>
@@ -41,42 +41,6 @@
 		                <string>The latest stable version of FileZilla Client is ([0-9.]+)</string>
 		                <key>result_output_var_name</key>
 		                <string>version</string>
-			</dict>
-	        </dict>
-	        <dict>
-			<key>Processor</key>
-			<string>URLTextSearcher</string>
-			<key>Arguments</key>
-			<dict>
-				<key>url</key>
-		                <string>%VERSION_URL%</string>
-				<key>request_headers</key>
-				<dict>
-					<key>user-agent</key>
-					<string>%USER_AGENT%</string>
-				</dict>
-		                <key>re_pattern</key>
-		                <string>dl([0-9]+).cdn.filezilla-project.org/client/FileZilla_3.67.1_macos-arm64.app.tar</string>
-		                <key>result_output_var_name</key>
-		                <string>dlserver</string>
-			</dict>
-	        </dict>
-	        <dict>
-			<key>Processor</key>
-			<string>URLTextSearcher</string>
-			<key>Arguments</key>
-			<dict>
-				<key>url</key>
-		                <string>%VERSION_URL%</string>
-				<key>request_headers</key>
-				<dict>
-					<key>user-agent</key>
-					<string>%USER_AGENT%</string>
-				</dict>
-		                <key>re_pattern</key>
-		                <string>_macos-arm64.app.tar.bz2(\?h=.*[0-9])</string>
-		                <key>result_output_var_name</key>
-		                <string>token</string>
 			</dict>
 	        </dict>
 		<dict>
