@@ -41,6 +41,14 @@
 		                <string>The latest stable version of FileZilla Client is ([0-9.]+)</string>
 		                <key>result_output_var_name</key>
 		                <string>version</string>
+				<key>re_pattern</key>
+		                <string>_macos-x86.app.tar.bz2(\?h=.*[0-9])"</string>
+		                <key>result_output_var_name</key>
+		                <string>token</string>
+				<key>re_pattern</key>
+		                <string>dl([0-9]+).cdn.filezilla-project.org\/client\/FileZilla_%version%_macos-x86.app.tar</string>
+		                <key>result_output_var_name</key>
+		                <string>dlserver</string>
 			</dict>
 	        </dict>
 		<dict>
@@ -49,7 +57,7 @@
 				<key>filename</key>
 				<string>%NAME%.tgz</string>
 				<key>url</key>
-				<string>https://download.filezilla-project.org/client/FileZilla_%version%_macos-x86.app.tar.bz2</string>
+				<string>https://dl%dlserver%.cdn.filezilla-project.org/client/FileZilla_%version%_macos-x86.app.tar.bz2%token%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
