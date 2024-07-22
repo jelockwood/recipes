@@ -43,17 +43,6 @@
 		                <string>version</string>
 			</dict>
 	        </dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>filename</key>
-				<string>%NAME%.tgz</string>
-				<key>url</key>
-				<string>https://dl%dlserver%.cdn.filezilla-project.org/client/FileZilla_%version%_macos-x86.app.tar.bz2%token%</string>
-			</dict>
-			<key>Processor</key>
-			<string>URLDownloader</string>
-		</dict>
 	        <dict>
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
@@ -90,6 +79,17 @@
 		                <string>token</string>
 			</dict>
 	        </dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.tgz</string>
+				<key>url</key>
+				<string>https://dl%dlserver%.cdn.filezilla-project.org/client/FileZilla_%version%_macos-x86.app.tar.bz2%token%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
