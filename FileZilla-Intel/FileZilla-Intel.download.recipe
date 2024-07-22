@@ -17,7 +17,7 @@
 		<key>SEARCH_URL</key>
 		<string>https://download.filezilla-project.org/client/</string>
 		<key>VERSION_URL</key>
-		<string>https://filezilla-project.org/download.php?type=client</string>
+		<string>https://filezilla-project.org/download.php?show_all=1</string>
 		<key>CHANNEL</key>
 		<string>release</string>
 	</dict>
