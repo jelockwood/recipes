@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of FileZilla.</string>
 	<key>Identifier</key>
-	<string>com.github.jelockwood.recipes.download.FileZilla-Intel</string>
+	<string>com.github.jelockwood.recipes.download.FileZilla-Arm</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
