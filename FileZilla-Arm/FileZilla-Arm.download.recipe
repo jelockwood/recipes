@@ -56,7 +56,7 @@
 					<string>%USER_AGENT%</string>
 				</dict>
 		                <key>re_pattern</key>
-		                <string>dl([0-9]+).cdn.filezilla-project.org/client/FileZilla_%version%_macos-x86.app.tar</string>
+		                <string>dl([0-9]+).cdn.filezilla-project.org/client/FileZilla_%version%_macos-arm64.app.tar</string>
 		                <key>result_output_var_name</key>
 		                <string>dlserver</string>
 			</dict>
@@ -74,7 +74,7 @@
 					<string>%USER_AGENT%</string>
 				</dict>
 		                <key>re_pattern</key>
-		                <string>_macos-x86.app.tar.bz2(\?h=.*[0-9])</string>
+		                <string>_macos-arm64.app.tar.bz2(\?h=.*[0-9])</string>
 		                <key>result_output_var_name</key>
 		                <string>token</string>
 			</dict>
