@@ -20,6 +20,8 @@
 		<string>https://filezilla-project.org/download.php?show_all=1</string>
 		<key>CHANNEL</key>
 		<string>release</string>
+		<key>ARCHITECTURE</key>
+		<string>arm64</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
@@ -38,54 +40,18 @@
 					<string>%USER_AGENT%</string>
 				</dict>
 		                <key>re_pattern</key>
-		                <string>The latest stable version of FileZilla Client is ([0-9.]+)</string>
+		                <string>(https://dl\d\.cdn\.filezilla-project\.org/client/FileZilla_[\d.]+_macos-%ARCHITECTURE%\.[^"]+)</string>
 		                <key>result_output_var_name</key>
-		                <string>version</string>
+		                <string>dlurl</string>
 			</dict>
 	        </dict>
-	        <dict>
-			<key>Processor</key>
-			<string>URLTextSearcher</string>
-			<key>Arguments</key>
-			<dict>
-				<key>url</key>
-		                <string>%VERSION_URL%</string>
-				<key>request_headers</key>
-				<dict>
-					<key>user-agent</key>
-					<string>%USER_AGENT%</string>
-				</dict>
-		                <key>re_pattern</key>
-		                <string>dl([0-9]+).cdn.filezilla-project.org/client/FileZilla_%version%_macos-arm64.app.tar</string>
-		                <key>result_output_var_name</key>
-		                <string>dlserver</string>
-			</dict>
-	        </dict>
-	        <dict>
-			<key>Processor</key>
-			<string>URLTextSearcher</string>
-			<key>Arguments</key>
-			<dict>
-				<key>url</key>
-		                <string>%VERSION_URL%</string>
-				<key>request_headers</key>
-				<dict>
-					<key>user-agent</key>
-					<string>%USER_AGENT%</string>
-				</dict>
-		                <key>re_pattern</key>
-		                <string>_macos-arm64.app.tar.bz2(\?h=.*[0-9])</string>
-		                <key>result_output_var_name</key>
-		                <string>token</string>
-			</dict>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
 				<string>%NAME%.tgz</string>
 				<key>url</key>
-				<string>https://dl%dlserver%.cdn.filezilla-project.org/client/FileZilla_%version%_macos-arm64.app.tar.bz2%token%</string>
+				<string>%dlurl%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
