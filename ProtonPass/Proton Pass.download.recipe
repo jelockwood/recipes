@@ -19,31 +19,13 @@
 	<string>2.3</string>
 	<key>Process</key>
 	<array>
-        	<dict>
-            		<key>Arguments</key>
-			<dict>
-				<key>request_headers</key>
-				<dict>
-					<key>user-agent</key>
-					<string>%USER_AGENT%</string>
-				</dict>
-                		<key>re_pattern</key>
-                		<string>url="(https://proton\.me/download/pass/macos/ProtonPass_([0-9]+(\.[0-9]+)+)\.dmg)"</string>
-                		<key>result_output_var_name</key>
-                		<string>DOWNLOAD_URL</string>
-                		<key>url</key>
-                		<string>https://proton.me/pass/download</string>
-            		</dict>
-            		<key>Processor</key>
-            		<string>URLTextSearcher</string>
-        	</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>%DOWNLOAD_URL%</string>
+				<string>https://proton.me/download/PassDesktop/darwin/universal/ProtonPass.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
