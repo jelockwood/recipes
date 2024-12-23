@@ -12,6 +12,8 @@
 	<dict>
 		<key>NAME</key>
 		<string>Proton Pass</string>
+		<key>USER_AGENT</key>
+		<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
@@ -19,16 +21,21 @@
 	<array>
         	<dict>
             		<key>Arguments</key>
-            	<dict>
-                	<key>re_pattern</key>
-                	<string>url="(https://proton\.me/download/pass/macos/ProtonPass_([0-9]+(\.[0-9]+)+)\.dmg)"</string>
-                	<key>result_output_var_name</key>
-                	<string>DOWNLOAD_URL</string>
-                	<key>url</key>
-                	<string>https://proton.me/pass/download</string>
-            	</dict>
-            	<key>Processor</key>
-            	<string>URLTextSearcher</string>
+			<dict>
+				<key>request_headers</key>
+				<dict>
+					<key>user-agent</key>
+					<string>%USER_AGENT%</string>
+				</dict>
+                		<key>re_pattern</key>
+                		<string>url="(https://proton\.me/download/pass/macos/ProtonPass_([0-9]+(\.[0-9]+)+)\.dmg)"</string>
+                		<key>result_output_var_name</key>
+                		<string>DOWNLOAD_URL</string>
+                		<key>url</key>
+                		<string>https://proton.me/pass/download</string>
+            		</dict>
+            		<key>Processor</key>
+            		<string>URLTextSearcher</string>
         	</dict>
 		<dict>
 			<key>Arguments</key>
