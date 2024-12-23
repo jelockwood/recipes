@@ -17,22 +17,26 @@
 	<string>2.3</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>appcast_url</key>
-				<string>https://proton.me/download/drive/macos/appcast.xml</string>
-			</dict>
-			<key>Processor</key>
-			<string>SparkleUpdateInfoProvider</string>
-		</dict>
+        <dict>
+	            <key>Arguments</key>
+	            <dict>
+	                <key>re_pattern</key>
+	                <string>url="(https://proton\.me/download/drive/macos/([0-9]+(\.[0-9]+)+)/ProtonDrive-([0-9]+(\.[0-9]+)+)\.tar\.xz)"</string>
+	                <key>result_output_var_name</key>
+	                <string>DOWNLOAD_URL</string>
+	                <key>url</key>
+	                <string>https://proton.me/download/drive/macos/appcast.xml</string>
+	            </dict>
+	            <key>Processor</key>
+	            <string>URLTextSearcher</string>
+	        </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%.dmg</string>
+				<string>%NAME%.tar.xz</string>
 				<key>url</key>
-				<string>https://proton.me/download/drive/macos/1.11.0/ProtonDrive-1.11.0.tar.xz</string>
+				<string>%DOWNLOAD_URL%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -40,6 +44,21 @@
 		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>archive_path</key>
+				<string>%pathname%</string>
+				<key>archive_format</key>
+				<string>tar</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
