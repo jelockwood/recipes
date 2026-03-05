@@ -30,11 +30,11 @@
 		    <dict>
 				<key>Processor</key>
 				<string>com.github.gregneagle.autopkg.sharedprocessors/DeprecationWarning</string>
-   		    	<key>Arguments</key>
-   		    	<dict>
-  		       		<key>warning_message</key>
-	        	 	<string>This recipe is deprecated and will be removed in the future. This is due to the fact FileZilla have 'hidden' the download URLs inside Javascript and hence it cannot be automatically processed.</string>
-	        	</dict>
+        		<key>Arguments</key>
+        		<dict>
+            		<key>warning_message</key>
+           		 	<string>This recipe is deprecated and will be removed in the future. This is due to the fact FileZilla have 'hidden' the download URLs inside Javascript and hence it cannot be automatically processed.</string>
+        		</dict>
 				<key>Processor</key>
 				<string>URLTextSearcher</string>
 				<key>Arguments</key>
