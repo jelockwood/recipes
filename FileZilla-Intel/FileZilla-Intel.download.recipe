@@ -35,6 +35,8 @@
             		<key>warning_message</key>
            		 	<string>This recipe is deprecated and will be removed in the future. This is due to the fact FileZilla have 'hidden' the download URLs inside Javascript and hence it cannot be automatically processed.</string>
         		</dict>
+			</dict>
+			<dict>
 				<key>Processor</key>
 				<string>URLTextSearcher</string>
 				<key>Arguments</key>
