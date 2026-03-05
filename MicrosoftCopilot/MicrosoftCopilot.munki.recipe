@@ -40,7 +40,7 @@
             <string>Get a clear view of your email, calendars, contacts and even the weather to connect with others more effectively. Designed for Mac, Outlook efficiently keeps track of your digital life.</string>
             <key>display_name</key>
             <string>Microsoft Copilot</string>
-            <key>Developer</key>
+            <key>developer</key>
             <string>Microsoft</string>
             <key>name</key>
             <string>%NAME%</string>
