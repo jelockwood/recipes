@@ -39,7 +39,7 @@ This tool is built on the foundations of the macOS Security Compliance Project, 
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.grahampugh.recipes.download.JamfComplianceEditor</string>
+	<string>com.github.jelockwood.recipes.download.JamfComplianceEditor</string>
 	<key>Process</key>
 	<array>
 		<dict>
