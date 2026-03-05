@@ -33,7 +33,7 @@
 	        <key>Arguments</key>
 	        <dict>
 	            <key>warning_message</key>
-	            <string>This recipe is deprecated and will be removed in the future. Please switch to ExampleCorp-recipes.</string>
+	            <string>This recipe is deprecated and will be removed in the future. This is due to FileZilla hiding the download URLs inside Javascript.</string>
  	       </dict>
 	 	</dict>
 		<dict>
