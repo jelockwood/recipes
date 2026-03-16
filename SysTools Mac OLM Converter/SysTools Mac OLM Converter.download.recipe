@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Created with Recipe Robot v2.5.0 (https://github.com/homebysix/recipe-robot)</string>
+	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
 	<string>Downloads the latest version of SysTools Mac OLM Converter.</string>
 	<key>Identifier</key>
@@ -14,7 +14,7 @@
 		<string>SysTools Mac OLM Converter</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>2.3</string>
+	<string>1.0.0</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -46,43 +46,6 @@
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack</string>
-				<key>flat_pkg_path</key>
-				<string>%pathname%/SysTools_Mac_OLM_Converter.pkg</string>
-				<key>purge_destination</key>
-				<true/>
-			</dict>
-			<key>Processor</key>
-			<string>FlatPkgUnpacker</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload</string>
-				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/SysTools_Mac_OLM_Converter.pkg/Payload</string>
-				<key>purge_destination</key>
-				<true/>
-			</dict>
-			<key>Processor</key>
-			<string>PkgPayloadUnpacker</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload/Applications/SysTools Mac OLM Converter.app/Contents/Info.plist</string>
-				<key>plist_version_key</key>
-				<string>CFBundleShortVersionString</string>
-			</dict>
-			<key>Processor</key>
-			<string>Versioner</string>
 		</dict>
 	</array>
 </dict>
