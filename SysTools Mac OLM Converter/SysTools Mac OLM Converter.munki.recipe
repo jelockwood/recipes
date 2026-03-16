@@ -26,6 +26,8 @@
 			</array>
 			<key>description</key>
 			<string>Export Outlook OLM mailbox items.</string>
+			<key>category</key>
+			<string>Utilities</string>
 			<key>developer</key>
 			<string>SysTools Software Private Limited</string>
 			<key>display_name</key>
