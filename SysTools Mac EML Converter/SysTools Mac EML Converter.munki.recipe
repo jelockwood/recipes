@@ -24,10 +24,10 @@
 			<array>
 				<string>testing</string>
 			</array>
-			<key>category</key>
-			<string>Utilities</string>
 			<key>description</key>
 			<string>Extract Attachments from EML/EMLX on Mac.</string>
+			<key>category</key>
+			<string>Utilities</string>
 			<key>developer</key>
 			<string>SysTools Software Private Limited</string>
 			<key>display_name</key>
