@@ -41,7 +41,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jelockwood.recipes.download.SysToolsMacEMLConverter</string>
+	<string>com.github.jelockwood.recipes.pkg.SysToolsMacEMLConverter</string>
 	<key>Process</key>
 	<array>
 		<dict>
