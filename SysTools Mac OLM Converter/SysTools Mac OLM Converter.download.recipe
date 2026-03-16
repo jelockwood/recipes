@@ -53,7 +53,7 @@
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack</string>
 				<key>flat_pkg_path</key>
-				<string>%pathname%/SysTools Mac OLM Converter v%version%.pkg</string>
+				<string>%pathname%/SysTools Mac OLM Converter v*.pkg</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
