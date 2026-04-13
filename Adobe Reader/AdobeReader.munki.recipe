@@ -14,7 +14,7 @@ Additional notes:
 preflight script, looking to find a user's trash folder to copy the .app into.
 </string>
 	<key>Identifier</key>
-	<string>com.github.autopkg.munki.AdobeReader</string>
+	<string>com.github.jelockwood.recipes.munki.AdobeReader</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
