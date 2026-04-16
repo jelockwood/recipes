@@ -53,6 +53,9 @@ fi
 if [ -e "/Applications/Adobe Acrobat Reader DC.app" ]; then
 	rm -r "/Applications/Adobe Acrobat Reader DC.app"
 fi
+if [ -e "/Applications/Adobe Acrobat DC/Adobe Acrobat.app" ]; then
+	rm -r "/Applications/Adobe Acrobat DC/Adobe Acrobat.app"
+fi
 exit 0
 </string>
 			<key>unattended_install</key>
@@ -109,7 +112,7 @@ exit 0
 				<string>%RECIPE_CACHE_DIR%/application_payload</string>
 				<key>installs_item_paths</key>
 				<array>
-					<string>/Applications/Adobe Acrobat DC/Adobe Acrobat.app</string>
+					<string>/Applications/Adobe Acrobat.app</string>
 				</array>
 			</dict>
 			<key>Processor</key>
