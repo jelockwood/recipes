@@ -50,7 +50,7 @@ Munki Architectures: x86_64, arm64
 				<array>
 					<dict>
 						<key>CFBundleShortVersionString</key>
-						<string>8.0.7</string>
+						<string>1.8.0_482</string>
 						<key>path</key>
 						<string>/Library/Java/JavaVirtualMachines/zulu-8.jre</string>
 						<key>type</key>
