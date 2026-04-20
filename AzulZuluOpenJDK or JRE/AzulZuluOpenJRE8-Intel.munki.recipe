@@ -26,6 +26,8 @@ Munki Architectures: x86_64, arm64
 			<string>x86</string>
 			<key>BUNDLE_TYPE</key>
 			<string>jre</string>
+			<key>DOWNLOAD_FILE_EXTENSION</key>
+			<string>zip</string>
 			<key>MUNKI_ARCHITECTURE</key>
 			<string>x86_64</string>
 			<key>MUNKI_CATEGORY</key>
