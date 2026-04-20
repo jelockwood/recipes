@@ -50,7 +50,7 @@ Munki Architectures: x86_64, arm64
 				<array>
 					<dict>
 						<key>CFBundleShortVersionString</key>
-						<string>1.8.0_482</string>
+						<string>8.0.482</string>
 						<key>path</key>
 						<string>/Library/Java/JavaVirtualMachines/zulu-8.jre</string>
 						<key>type</key>
@@ -182,6 +182,18 @@ Munki Architectures: x86_64, arm64
 					<string>%pkg_path%</string>
 					<key>repo_subdirectory</key>
 					<string>%MUNKI_REPO_SUBDIR%</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+					<key>path_list</key>
+					<array>
+						<string>%RECIPE_CACHE_DIR%/%NAME%/</string>
+						<string>%RECIPE_CACHE_DIR%/unpack/</string>
+					</array>
 				</dict>
 			</dict>
 		</array>
