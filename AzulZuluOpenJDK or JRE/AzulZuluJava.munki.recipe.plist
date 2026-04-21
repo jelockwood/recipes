@@ -58,7 +58,7 @@ Munki Architectures: x86_64, arm64
 				<key>minimum_os_version</key>
 				<string>%MUNKI_MINIMUM_OS_VERSION%</string>
 				<key>name</key>
-				<string>%NAME%%BUNDLE_TYPE%%JAVA_MAJOR_VERSION%</string>
+				<string>%NAME%%BUNDLE_TYPE%8</string>
 				<key>unattended_install</key>
 				<true/>
 				<key>unattended_uninstall</key>
