@@ -14,7 +14,7 @@ You can see David's recipes here -
 
 [https://github.com/autopkg/davidbpirie-recipes/tree/main/AzulZuluJava](https://github.com/autopkg/davidbpirie-recipes/tree/main/AzulZuluJava)
 
-I did sometime ago devise a workaround for this. If you have an AutoPkg recipe written as a plist which calls i.e. has defined as its parent recipe a YAML recipe then AutoPkgr will see the plist recipe and you can create an override of that in AutoPkgr. AutoPkgr will then runn the override which will call the parent plist recipe which in turn will call the parent YAML recipe.
+I did sometime ago devise a workaround for this. If you have an AutoPkg recipe written as a plist which calls i.e. has defined as its parent recipe a YAML recipe then AutoPkgr will see the plist recipe and you can create an override of that in AutoPkgr. AutoPkgr will then run the override which will call the parent plist recipe which in turn will call the parent YAML recipe.
 
 Therefore I have created a stripped down plist recipe which calls as its parent recipe David's YAML Munki recipe. I can then in AutoPkgr create multiple overrides all pointing to my plist - one for each Azul Java release.
 
