@@ -40,7 +40,6 @@ Munki Architectures: x86_64, arm64
 			<string>10.14.0</string>
 			<key>MUNKI_REPO_SUBDIR</key>
 			<string>%MUNKI_CATEGORY%/%MUNKI_DEVELOPER%/%NAME%/%ARCHITECTURE%</string>
-			<key>pkginfo</key>
 		</dict>
 	</dict>
 </plist>
