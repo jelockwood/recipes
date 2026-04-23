@@ -16,53 +16,5 @@ Munki Architectures: x86_64, arm64
 		<string>2.3.0</string>
 		<key>ParentRecipe</key>
 		<string>com.github.davidbpirie.munki.AzulZuluJava</string>
-		<key>Input</key>
-		<dict>
-			<key>JAVA_MAJOR_VERSION</key>
-			<string>8</string>
-			<key>NAME</key>
-			<string>AzulZuluJavaJRE%JAVA_MAJOR_VERSION%</string>
-			<key>ARCHITECTURE</key>
-			<string>arm</string>
-			<key>BUNDLE_TYPE</key>
-			<string>jre</string>
-			<key>MUNKI_ARCHITECTURE</key>
-			<string>arm64</string>
-			<key>MUNKI_CATEGORY</key>
-			<string>Developer Tools</string>
-			<key>MUNKI_DESCRIPTION</key>
-			<string>Azul Zulu builds of OpenJDK are open source, TCK-tested and certified builds of OpenJDK. Azul Zulu is available for a wide range of hardware platforms and operating systems.</string>
-			<key>MUNKI_DEVELOPER</key>
-			<string>Azul Systems</string>
-			<key>MUNKI_DISPLAYNAME</key>
-			<string>Azul Zulu Java %JAVA_MAJOR_VERSION% %BUNDLE_TYPE% %ARCHITECTURE%</string>
-			<key>MUNKI_MINIMUM_OS_VERSION</key>
-			<string>10.14.0</string>
-			<key>MUNKI_REPO_SUBDIR</key>
-			<string>%MUNKI_CATEGORY%/%MUNKI_DEVELOPER%/%NAME%/%ARCHITECTURE%</string>
-			<key>pkginfo</key>
-			<dict>
-				<key>catalogs</key>
-				<array>
-					<string>testing</string>
-				</array>
-				<key>category</key>
-				<string>%MUNKI_CATEGORY%</string>
-				<key>description</key>
-				<string>%MUNKI_DESCRIPTION%</string>
-				<key>developer</key>
-				<string>%MUNKI_DEVELOPER%</string>
-				<key>display_name</key>
-				<string>%MUNKI_DISPLAYNAME%</string>
-				<key>minimum_os_version</key>
-				<string>%MUNKI_MINIMUM_OS_VERSION%</string>
-				<key>name</key>
-				<string>%NAME%</string>
-				<key>unattended_install</key>
-				<true/>
-				<key>unattended_uninstall</key>
-				<true/>
-			</dict>
-		</dict>
 	</dict>
 </plist>
