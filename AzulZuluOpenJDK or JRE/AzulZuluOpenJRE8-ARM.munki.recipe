@@ -15,7 +15,7 @@ Munki Architectures: x86_64, arm64
 		<key>MinimumVersion</key>
 		<string>2.3.0</string>
 		<key>ParentRecipe</key>
-		<string>com.github.davidbpirie.pkg.AzulZuluJava</string>
+		<string>com.github.davidbpirie.munki.AzulZuluJava</string>
 		<key>Input</key>
 		<dict>
 			<key>JAVA_MAJOR_VERSION</key>
