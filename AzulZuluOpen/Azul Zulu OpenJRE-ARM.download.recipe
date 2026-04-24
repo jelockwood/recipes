@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the current release version of Azul Zulu OpenJRE 8.
+Set the ARCHITECTURE key to "x" to download the Intel version or "aarch" for Apple Silicon version.</string>
+    <key>Identifier</key>
+    <string>com.jelockwood.recipe.download.AzulZuluJavaJRE8-ARM-test</string>
+    <key>Input</key>
+    <dict>
+        <key>ARCHITECTURE</key>
+        <string>arch</string>
+        <key>NAME</key>
+        <string>AzulZuluOpenJRE8</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>1.1</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>re_pattern</key>
+                <string>(zulu8.([0-9]+(\.[0-9]+)+)-ca-jre8.([0-9]+(\.[0-9]+)+)-macosx_%ARCHITECTURE%64\.dmg)</string>
+                <key>url</key>
+                <string>https://cdn.azul.com/zulu/bin/?C=M;O=D</string>
+            </dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://cdn.azul.com/zulu/bin/%match%</string>
+            </dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pattern</key>
+                <string>%pathname%/*.pkg</string>
+            </dict>
+            <key>Processor</key>
+            <string>FileFinder</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>expected_authority_names</key>
+                <array>
+                    <string>Developer ID Installer: Azul Systems, Inc. (TDTHCUPYFR)</string>
+                    <string>Developer ID Certification Authority</string>
+                    <string>Apple Root CA</string>
+                </array>
+                <key>input_path</key>
+                <string>%pathname%/%dmg_found_filename%</string>
+            </dict>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+        </dict>
+    </array>
+</dict>
+</plist>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the current release version of Azul Zulu OpenJDK 8, builds a package and imports it to Munki.</string>
+    <key>Identifier</key>
+    <string>com.jelockwood.recipe.pkg.AzulZuluJavaJRE8-ARM-Test</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>AzulZuluOpenJRE8</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.4.3</string>
+    <key>ParentRecipe</key>
+    <string>com.jelockwood.recipe.download.AzulZuluJavaJRE8-ARM-test</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>index</key>
+                <integer>0</integer>
+                <key>split_on</key>
+                <string>.dmg</string>
+                <key>version</key>
+                <string>%match%</string>
+            </dict>
+            <key>Processor</key>
+            <string>com.github.homebysix.VersionSplitter/VersionSplitter</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/%version%.pkg</string>
+                <key>source_pkg</key>
+                <string>%pathname%/%dmg_found_filename%</string>
+            </dict>
+            <key>Processor</key>
+            <string>PkgCopier</string>
+        </dict>
+    </array>
+</dict>
+</plist>
