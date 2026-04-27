@@ -123,6 +123,8 @@ Munki Architectures: x86_64, arm64
 						<string>755</string>
 						<key>Library/Java/JavaVirtualMachines</key>
 						<string>755</string>
+	                    <key>Library/Java/JavaVirtualMachines/zulu-8.jre</key>
+	                    <string>0755</string>
 					</dict>
 					<key>pkgroot</key>
 					<string>%RECIPE_CACHE_DIR%/%NAME%</string>
@@ -160,6 +162,22 @@ Munki Architectures: x86_64, arm64
 				<key>Processor</key>
 				<string>MunkiPkginfoMerger</string>
 			</dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>changes</key>
+                <array>
+                    <dict>
+                        <key>path</key>
+                        <string>/Library/Java/JavaVirtualMachines/zulu-8.jre</string>
+                        <key>CFBundleIdentifier</key>
+                        <string>com.azul.zulu.jre</string>
+                    </dict>
+                </array>
+            </dict>
+            <key>Processor</key>
+            <string>com.github.dataJAR-recipes.Shared Processors/InstallsArrayCFBundleIdentifierChanger</string>
+        </dict>
 			<dict>
 				<key>Processor</key>
 				<string>MunkiImporter</string>
