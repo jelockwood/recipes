@@ -46,19 +46,6 @@ Munki Architectures: x86_64, arm64
 				<array>
 					<string>testing</string>
 				</array>
-				<key>installs</key>
-				<array>
-					<dict>
-						<key>CFBundleShortVersionString</key>
-						<string>8.0.7</string>
-						<key>path</key>
-						<string>/Library/Java/JavaVirtualMachines/zulu-8.jre</string>
-						<key>type</key>
-						<string>bundle</string>
-						<key>version_comparison_key</key>
-						<string>CFBundleShortVersionString</string>
-					</dict>
-				</array>
 				<key>category</key>
 				<string>%MUNKI_CATEGORY%</string>
 				<key>description</key>
@@ -163,7 +150,7 @@ Munki Architectures: x86_64, arm64
 					<string>%RECIPE_CACHE_DIR%/%NAME%/</string>
 					<key>installs_item_paths</key>
 					<array>
-						<string>%install_location%</string>
+						<string>/Library/Java/JavaVirtualMachines/zulu-%JAVA_MAJOR_VERSION%.%BUNDLE_TYPE%</string>
 					</array>
 					<key>version_comparison_key</key>
 					<string>CFBundleShortVersionString</string>
