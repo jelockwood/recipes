@@ -150,7 +150,7 @@ Munki Architectures: x86_64, arm64
 					<string>%RECIPE_CACHE_DIR%/%NAME%/</string>
 					<key>installs_item_paths</key>
 					<array>
-						<string>/Library/Java/JavaVirtualMachines/zulu-%install_location%</string>
+						<string>/Library/Java/JavaVirtualMachines/zulu-java-8.jre</string>
 					</array>
 					<key>version_comparison_key</key>
 					<string>CFBundleShortVersionString</string>
