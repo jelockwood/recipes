@@ -35,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jelockwood.recipes.download.MacDown3000</string>
+	<string>com.github.rtrouton.download.MacDown3000</string>
 	<key>Process</key>
 	<array>
 		<dict>
