@@ -26,6 +26,8 @@ For a successful install, there needs to be a logged in user. To achieve this an
             <array>
                 <string>testing</string>
             </array>
+			<key>category</key>
+			<string>Utilities</string>
             <key>description</key>
             <string>Control at your fingertips
 
