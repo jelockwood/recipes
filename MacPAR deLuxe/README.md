@@ -1,4 +1,4 @@
-MacPar Deluxe had not had an update for quite some time. 
+**MacPar Deluxe had not had an update for quite some time.** 
 
 However it was (is) still fully functional in that it supports the newer RAR format and is a universal binary so it works on Apple Silicon Macs. The author has apparently removed the webpage and download link for it so I am presuming he has discontinued it.
 
